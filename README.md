@@ -1,6 +1,8 @@
 Project 2: Shopping Cart
 ========================
 
+
+
 Full problem description is located at:
 https://stellar.mit.edu/S/course/6/fa12/6.170/courseMaterial/topics/topic2/project/text3/text
 
