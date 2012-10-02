@@ -3,14 +3,14 @@ class ApplicationController < ActionController::Base
 
 
   def current_user
-    @_current_user ||= session[:current_user] && User.find_by_id(session[:current_user])
+    @_current_user ||= session[:user_id] && User.find_by_id(session[:user_id])
   end
   
   def checkAuth
-    if !session[:current_user]
-      session[:current_user] = request.remote_ip
+    if !session[:user_id]
+      session[:user_id] = request.remote_ip
     end
-    logger.debug("Current user: " + session[:current_user].to_s)
+    logger.debug("Current user: " + session[:user_id].to_s)
   end
 
 end

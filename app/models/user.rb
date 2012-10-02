@@ -1,10 +1,14 @@
 class User < ActiveRecord::Base
-  attr_accessible :email, :id, :name, :password, :password_confirmation
-  :has_secure_password
-  
+  attr_accessible :email, :password, :password_confirmation, :name, :id
+  has_secure_password
+
+  validates :password, :presence => true, :on => :create
   validates :email, :presence => true
   validates :email, :uniqueness => true
-  validates :name, :presence => true
-  validates :id, :presence => true
-  validates :password, :presence => true, :on => :create
+
+  def changePassword(p)
+    self.password = p
+    self.save
+  end
+
 end

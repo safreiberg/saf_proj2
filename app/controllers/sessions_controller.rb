@@ -12,12 +12,12 @@ class SessionsController < ApplicationController
       logger.debug("Signin failed.")
       flash.now.alert = "Invalid email or password"
     end
-    logger.debug("Current user: " + session[:current_user] + ", in SessionsController.")
+    logger.debug("Current user: " + session[:user_id].to_s + ", in SessionsController.")
   end
   
   def destroy
     session[:user_id] = nil
-    redirect_to root_url :notice=> "Logged out"
+    redirect_to root_url :notice => "Logged out"
   end
 
 end

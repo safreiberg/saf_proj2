@@ -1,9 +1,9 @@
 SafProj2::Application.routes.draw do
   
-  get "user/new" => "user#new"
-
-  get "user/create" => "user#create"
-  post "user/create" => "user#create"
+  resources :users
+  
+  get "user/create" => "users#create"
+  post "user/create" => "users#create"
 
   get "cart/view/:userid" => "cart#view"
   get "cart/view/" => "cart#view"
@@ -17,7 +17,8 @@ SafProj2::Application.routes.draw do
   match "sessions/create" => "sessions#create"
   
   match "login" => "sessions#new"
-  match "signup" => "user#new"
+  match "signup" => "users#new"
+  match "logout" => "sessions#destroy"
 
   root :to => "welcome#index"
   match "*path" => "welcome#index"
