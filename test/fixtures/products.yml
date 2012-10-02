@@ -1,9 +1,15 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
 one:
-  inventory: 1
+  inventory: 17
   price: 1.5
+  id: 1
+  name: "Item One"
+  description: "The first product."
 
 two:
   inventory: 1
   price: 1.5
+  id: 2
+  name: "Item Two"
+  description: "The second product."  
