@@ -1,4 +1,7 @@
 class ItemController < ApplicationController
+  
+  before_filter :checkAuth
+    
   def list
   end
 

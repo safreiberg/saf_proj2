@@ -1,6 +1,8 @@
 class CartController < ApplicationController
   protect_from_forgery
   
+  before_filter :checkAuth
+  
   def view
   end
 
@@ -9,4 +11,5 @@ class CartController < ApplicationController
   
   def specs
   end
+
 end
