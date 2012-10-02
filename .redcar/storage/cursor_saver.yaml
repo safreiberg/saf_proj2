@@ -48,4 +48,7 @@ cursor_positions:
   - :path: app/models/product_order.rb
     :cursor_offset: 499
     :timestamp: 2012-10-01 18:59:13 -07:00
+  - :path: .gitignore
+    :cursor_offset: 440
+    :timestamp: 2012-10-01 19:19:52 -07:00
 files_to_retain: 0
