@@ -1,4 +1,4 @@
-1349144392
+1349147646
 Application	/home/saf/projects/saf_proj2/config/application.rb	  class Application 
 ApplicationController	/home/saf/projects/saf_proj2/app/controllers/application_controller.rb	class ApplicationController 
 ApplicationHelper	/home/saf/projects/saf_proj2/app/helpers/application_helper.rb	module ApplicationHelper
@@ -13,6 +13,10 @@ CreateCarts	/home/saf/projects/saf_proj2/db/migrate/20121002013907_create_carts.
 CreateProductOrders	/home/saf/projects/saf_proj2/db/migrate/20121001200240_create_product_orders.rb	class CreateProductOrders 
 CreateProducts	/home/saf/projects/saf_proj2/db/migrate/20121001200222_create_products.rb	class CreateProducts 
 CreateUsers	/home/saf/projects/saf_proj2/db/migrate/20121002014845_create_users.rb	class CreateUsers 
+ItemController	/home/saf/projects/saf_proj2/app/controllers/item_controller.rb	class ItemController 
+ItemControllerTest	/home/saf/projects/saf_proj2/test/functional/item_controller_test.rb	class ItemControllerTest 
+ItemHelper	/home/saf/projects/saf_proj2/app/helpers/item_helper.rb	module ItemHelper
+ItemHelperTest	/home/saf/projects/saf_proj2/test/unit/helpers/item_helper_test.rb	class ItemHelperTest 
 Product	/home/saf/projects/saf_proj2/app/models/product.rb	class Product 
 ProductOrder	/home/saf/projects/saf_proj2/app/models/product_order.rb	class ProductOrder 
 ProductOrderTest	/home/saf/projects/saf_proj2/test/unit/product_order_test.rb	class ProductOrderTest 
@@ -33,13 +37,16 @@ change	/home/saf/projects/saf_proj2/db/migrate/20121001200240_create_product_ord
 change	/home/saf/projects/saf_proj2/db/migrate/20121002013907_create_carts.rb	  def change
 change	/home/saf/projects/saf_proj2/db/migrate/20121002014845_create_users.rb	  def change
 change_quantity	/home/saf/projects/saf_proj2/app/models/product_order.rb	  def change_quantity(quant)
-checkout	/home/saf/projects/saf_proj2/app/controllers/cart_controller.rb	  def checkout
 checkout	/home/saf/projects/saf_proj2/app/models/cart.rb	  def checkout
+checkout	/home/saf/projects/saf_proj2/app/controllers/cart_controller.rb	  def checkout
 clear	/home/saf/projects/saf_proj2/app/models/cart.rb	  def clear
 index	/home/saf/projects/saf_proj2/app/controllers/welcome_controller.rb	  def index
+list	/home/saf/projects/saf_proj2/app/controllers/item_controller.rb	  def list
 remove	/home/saf/projects/saf_proj2/app/models/cart.rb	  def remove(prod_ord)
 remove_from_cart	/home/saf/projects/saf_proj2/app/models/product_order.rb	  def remove_from_cart
+specs	/home/saf/projects/saf_proj2/app/controllers/cart_controller.rb	  def specs
 test_homepage	/home/saf/projects/saf_proj2/test/performance/browsing_test.rb	  def test_homepage
 update_inventory	/home/saf/projects/saf_proj2/app/models/product.rb	  def update_inventory(amount) 
 update_price	/home/saf/projects/saf_proj2/app/models/product.rb	  def update_price(cost)
 view	/home/saf/projects/saf_proj2/app/controllers/cart_controller.rb	  def view
+zoom	/home/saf/projects/saf_proj2/app/controllers/item_controller.rb	  def zoom

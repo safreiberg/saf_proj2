@@ -1,0 +1,19 @@
+<html>
+<body>
+  <h1>Item#zoom</h1>
+  <p>Find me in app/views/item/zoom.html.erb</p>
+  <p><a href="/item/list/">Back to library</a></p>
+  <% product = Product.where(:id => params[:id].to_i).first%>
+  <p>Name: <%= product.name %></p>
+  <p>Price: $<%= product.price %></p>
+  <p>ID: <%= product.id %></p>
+  <p>Description: <%= product.description %></p>
+  <br />
+  <p>Add to cart: </p>
+  <form action="/cart/view/" method="get">
+    Quantity: <input type="number" name="quantity" min="0" max="<%=product.inventory%>">
+    <input type="hidden" name="product_id" value="<%= product.id%>">
+    <input type="submit" value="Add!">
+  </form> 
+</body>
+</html>
