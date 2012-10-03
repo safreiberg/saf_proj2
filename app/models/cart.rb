@@ -1,9 +1,7 @@
 class Cart < ActiveRecord::Base
-  attr_accessible :id, :user_id
+  attr_accessible :user_id
   
-  validates :id, :presence => true
   validates :user_id, :presence => true
-  validates :user_id, :uniqueness => true
   
   def add(prod_ord)
     prod_ord.add_to_cart(self.id)

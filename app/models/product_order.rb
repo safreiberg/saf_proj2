@@ -1,9 +1,8 @@
 class ProductOrder < ActiveRecord::Base
-  attr_accessible :product_id, :quantity, :id
+  attr_accessible :product_id, :quantity, :cart_id
   
   validates :product_id, :presence => true
   validates :quantity, :presence => true
-  validates :id, :presence => true
   validates :cart_id, :presence => true
   
   def add_to_cart(new_cart_id)

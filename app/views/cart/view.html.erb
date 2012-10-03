@@ -1,2 +1,21 @@
 <h1>Cart#view</h1>
 <p>Find me in app/views/cart/view.html.erb</p>
+
+<p>Cart Contents:</p>
+
+  <table border="1">
+    <tr>
+      <th>Name</th>
+      <th>Price</th>
+      <th>Quantity</th>
+      <th>Total</th>
+    </tr>
+    <% ProductOrder.where(:cart_id => session[:cart].id).each do |po| %>
+    <% prod = Product.where(:id => po.product_id).first %>
+    <tr>
+      <td><a href="/item/zoom/<%= prod.name %>"><%= prod.name %></a></td>
+      <td><%= prod.price %></td>
+      <td><%= po.quantity %></td>
+      <td><%= prod.price.to_f * po.quantity.to_f %></td>
+    </tr><% end %>
+  </table>

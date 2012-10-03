@@ -21,9 +21,6 @@ cursor_positions:
   - :path: db/migrate/20121001200222_create_products.rb
     :cursor_offset: 208
     :timestamp: 2012-10-01 21:34:31 -04:00
-  - :path: app/models/product_order.rb
-    :cursor_offset: 499
-    :timestamp: 2012-10-01 21:59:13 -04:00
   - :path: .gitignore
     :cursor_offset: 440
     :timestamp: 2012-10-01 22:19:52 -04:00
@@ -45,42 +42,9 @@ cursor_positions:
   - :path: config/initializers/session_store.rb
     :cursor_offset: 124
     :timestamp: 2012-10-01 23:34:49 -04:00
-  - :path: app/models/cart.rb
-    :cursor_offset: 571
-    :timestamp: 2012-10-01 22:07:32 -04:00
-  - :path: app/views/item/zoom.html.erb
-    :cursor_offset: 648
-    :timestamp: 2012-10-01 23:18:24 -04:00
-  - :path: app/models/product.rb
-    :cursor_offset: 457
-    :timestamp: 2012-10-01 21:42:49 -04:00
-  - :path: app/views/item/list.html.erb
-    :cursor_offset: 501
-    :timestamp: 2012-10-01 22:50:38 -04:00
-  - :path: app/views/welcome/index.html.erb
-    :cursor_offset: 166
-    :timestamp: 2012-10-01 23:46:40 -04:00
-  - :path: app/controllers/welcome_controller.rb
-    :cursor_offset: 89
-    :timestamp: 2012-10-01 23:45:31 -04:00
-  - :path: app/controllers/cart_controller.rb
-    :cursor_offset: 161
-    :timestamp: 2012-10-01 23:41:48 -04:00
-  - :path: config/routes.rb
-    :cursor_offset: 434
-    :timestamp: 2012-10-02 11:33:20 -04:00
-  - :path: app/views/sessions/create.html.erb
-    :cursor_offset: 158
-    :timestamp: 2012-10-02 11:34:50 -04:00
-  - :path: app/controllers/application_controller.rb
-    :cursor_offset: 43
-    :timestamp: 2012-10-02 11:28:11 -04:00
   - :path: app/controllers/user_controller.rb
     :cursor_offset: 262
     :timestamp: 2012-10-01 23:27:15 -04:00
-  - :path: app/controllers/sessions_controller.rb
-    :cursor_offset: 570
-    :timestamp: 2012-10-02 11:33:50 -04:00
   - :path: Gemfile
     :cursor_offset: 559
     :timestamp: 2012-10-01 23:24:39 -04:00
@@ -90,16 +54,66 @@ cursor_positions:
   - :path: app/views/user/create.html.erb
     :cursor_offset: 69
     :timestamp: 2012-10-02 14:49:49 -04:00
-  - :path: app/models/user.rb
-    :cursor_offset: 111
-    :timestamp: 2012-10-02 15:16:51 -04:00
-  - :path: app/controllers/users_controller.rb
-    :cursor_offset: 374
-    :timestamp: 2012-10-02 15:25:02 -04:00
   - :path: app/views/sessions/new.html.erb
     :cursor_offset: 256
     :timestamp: 2012-10-02 11:44:01 -04:00
+  - :path: app/views/item/list.html.erb
+    :cursor_offset: 339
+    :timestamp: 2012-10-01 22:50:38 -04:00
+    :selection_offset: 277
+    :block_selection_mode: false
+  - :path: app/views/item/zoom.html.erb
+    :cursor_offset: 237
+    :timestamp: 2012-10-02 20:56:33 -04:00
+  - :path: app/controllers/welcome_controller.rb
+    :cursor_offset: 89
+    :timestamp: 2012-10-01 23:45:31 -04:00
+  - :path: app/views/welcome/index.html.erb
+    :cursor_offset: 356
+    :timestamp: 2012-10-02 17:02:01 -04:00
+  - :path: app/controllers/users_controller.rb
+    :cursor_offset: 256
+    :timestamp: 2012-10-02 17:02:13 -04:00
+  - :path: db/migrate/20121002014845_create_users.rb
+    :cursor_offset: 182
+    :timestamp: 2012-10-02 15:20:53 -04:00
+  - :path: app/views/users/create.html.erb
+    :cursor_offset: 269
+    :timestamp: 2012-10-02 15:51:07 -04:00
+  - :path: config/routes.rb
+    :cursor_offset: 180
+    :timestamp: 2012-10-02 20:49:51 -04:00
+  - :path: app/views/users/new.html.erb
+    :cursor_offset: 650
+    :timestamp: 2012-10-02 16:56:38 -04:00
+  - :path: app/views/sessions/create.html.erb
+    :cursor_offset: 6
+    :timestamp: 2012-10-02 11:34:50 -04:00
+  - :path: app/models/product_order.rb
+    :cursor_offset: 90
+    :timestamp: 2012-10-02 21:13:06 -04:00
+  - :path: app/controllers/sessions_controller.rb
+    :cursor_offset: 370
+    :timestamp: 2012-10-02 21:01:25 -04:00
   - :path: app/controllers/item_controller.rb
-    :cursor_offset: 50
-    :timestamp: 2012-10-01 23:43:27 -04:00
+    :cursor_offset: 99
+    :timestamp: 2012-10-02 20:59:34 -04:00
+  - :path: app/controllers/application_controller.rb
+    :cursor_offset: 517
+    :timestamp: 2012-10-02 21:10:12 -04:00
+  - :path: app/controllers/cart_controller.rb
+    :cursor_offset: 314
+    :timestamp: 2012-10-02 21:17:22 -04:00
+  - :path: app/models/cart.rb
+    :cursor_offset: 101
+    :timestamp: 2012-10-02 21:10:29 -04:00
+  - :path: app/views/cart/view.html.erb
+    :cursor_offset: 345
+    :timestamp: 2012-10-02 21:14:30 -04:00
+  - :path: app/models/product.rb
+    :cursor_offset: 175
+    :timestamp: 2012-10-02 21:14:03 -04:00
+  - :path: app/models/user.rb
+    :cursor_offset: 98
+    :timestamp: 2012-10-02 21:13:54 -04:00
 files_to_retain: 0
