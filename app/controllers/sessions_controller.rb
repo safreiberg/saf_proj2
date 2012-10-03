@@ -1,13 +1,34 @@
 class SessionsController < ApplicationController
+  after_filter :check_cart
 
   def new
   end
   
+  ##  This gets called on user signin.
+  ##  Here's an option. What if someone is browing the site, adds some shit to his cart, then
+  ##    realizes that he has an account. So he signs in, and there's existing stuff in his cart.
+  ##    Now what? 
+  ##    Our solution is to combine the two carts and let him deal with the conflict. This seems
+  ##    better than the alternatives of (1) blow away the older cart, or (2) blow away the new
+  ##    cart.
   def create
     user = User.find_by_email(params[:email])
     if user && user.authenticate(params[:password])
       session[:user_id] = user.id
-      redirect_to root_url, :notice => "Logged in"
+      ##  Time to check if there's a cart.
+      @cart = Cart.where(:user_id => session[:user_id]).first
+      if @cart == nil
+        redirect_to root_url, :notice => "Successfully logged in."
+        return
+      else
+        ProductOrder.where(:cart_id => session[:cart].id).each do |po| 
+          po.add_to_cart(@cart.id) 
+          po.save
+        end
+        
+      end
+      redirect_to root_url, :notice => "Successfully logged in."
+      return
     else
       logger.debug("Signin failed.")
       flash.now.alert = "Invalid email or password"

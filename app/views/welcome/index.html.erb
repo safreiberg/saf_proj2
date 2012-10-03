@@ -1,8 +1,16 @@
 <h1>Welcome#index</h1>
 <p>Find me in app/views/welcome/index.html.erb</p>
-<p>Welcome, <%= session[:user_id]%>.</p>
 
+<% if session[:user_id].to_s.include? "." %>
 <p>You can sign in <a href="/login">here</a>.</p>
+<% else %>
+<p>Welcome, <%= session[:user_id]%>.</p>
+<p>You can also <a href="/logout">logout</a>.</p>
+<% end %>
+
+<p>Look at the <a href="/item/list">items</a>!</p>
+
+<p><a href="/cart/view">My Cart</a></p>
 
 <div class="flash">
     <%- if !notice.nil? -%>

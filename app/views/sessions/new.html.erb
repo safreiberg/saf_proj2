@@ -6,13 +6,13 @@
   <div class="flash">
     <%- if !notice.nil? -%>
     <p class="notice"><%= notice %></p>
-    <%- end -%> 
+    <%- end -%>
     <%- if !alert.nil? -%>
     <p class="alert"><%= alert %></p>
-    <%- end -%>     
+    <%- end -%>
 </div>
 
-  <%= form_tag('sessions/create') do %>
+  <%= form_tag('/sessions/create') do %>
   <div class= "field">
     <%= label_tag :email %>
     <%= text_field_tag :email, params[:email] %>
@@ -25,5 +25,7 @@
     <%= submit_tag "Log in" %>
   </div>
   <% end %>
+  <br />
+  <p>Or if you don't have an account, <a href="/signup">sign up here</a>.</p>
 </body>
 </html>

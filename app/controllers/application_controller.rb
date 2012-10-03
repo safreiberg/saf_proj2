@@ -1,3 +1,5 @@
+require 'zlib'
+
 class ApplicationController < ActionController::Base
   protect_from_forgery
 
@@ -8,15 +10,18 @@ class ApplicationController < ActionController::Base
   
   def checkAuth
     if !session[:user_id]
-      session[:user_id] = request.remote_ip
+      session[:user_id] = Zlib.crc32(request.remote_ip)
     end
     logger.debug("Current user: " + session[:user_id].to_s)
   end
   
   def check_cart
-    if !session[:cart] || session[:cart] == nil
-      @cart = Cart.new(:user_id => session[:user_id])
-      @cart.save
+    if !session[:cart] || session[:cart] == nil || session[:cart].user_id != session[:user_id]
+      @cart = Cart.where(:user_id => session[:user_id]).first
+      if @cart == nil
+        @cart = Cart.new(:user_id => session[:user_id])
+        @cart.save
+      end
       session[:cart] = @cart
     end
     logger.debug("Current cart: " + session[:cart].id.to_s)

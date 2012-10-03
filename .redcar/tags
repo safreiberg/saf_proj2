@@ -1,4 +1,4 @@
-1349229835
+1349289250
 AddSessionsTable	/home/saf/projects/saf_proj2/db/migrate/20121002033419_add_sessions_table.rb	class AddSessionsTable 
 Application	/home/saf/projects/saf_proj2/config/application.rb	  class Application 
 ApplicationController	/home/saf/projects/saf_proj2/app/controllers/application_controller.rb	class ApplicationController 
