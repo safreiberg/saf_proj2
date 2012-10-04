@@ -10,7 +10,7 @@ class CartController < ApplicationController
       if prod_ord = ProductOrder.where(:cart_id => session[:cart], :product_id => params[:product_id]).first
         prod_ord.change_quantity(prod_ord.quantity.to_i + params[:quantity].to_i)
       else
-        prod_ord = ProductOrder.create(:cart_id => session[:cart], :quantity => params[:product_id], :product_id => params[:product_id])
+        prod_ord = ProductOrder.create(:cart_id => session[:cart], :quantity => params[:quantity], :product_id => params[:product_id])
       end
     end
     ## This is the update part
@@ -26,6 +26,7 @@ class CartController < ApplicationController
   end
 
   def checkout
+    session[:cart].checkout
   end
   
   def specs

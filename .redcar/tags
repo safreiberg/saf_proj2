@@ -1,4 +1,4 @@
-1349317181
+1349318238
 AddAuthenticatedToUsers	/home/saf/projects/saf_proj2/db/migrate/20121004014426_add_authenticated_to_users.rb	class AddAuthenticatedToUsers 
 AddSessionsTable	/home/saf/projects/saf_proj2/db/migrate/20121002033419_add_sessions_table.rb	class AddSessionsTable 
 Application	/home/saf/projects/saf_proj2/config/application.rb	  class Application 

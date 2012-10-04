@@ -23,7 +23,9 @@ class Cart < ActiveRecord::Base
 
   def checkout
     ## Logic could go here with logging or whatever.
-    ProductOrder.find(:cart_id => self.id).destroy
+    ProductOrder.where(:cart_id => self.id).each do |po|
+      po.destroy
+    end
   end
 
   def clear
