@@ -20,6 +20,27 @@ class AdminController < ApplicationController
         @description_call = product.id.to_s + ".description"
         product.update_description(params[@description_call])
       end
+      ## Now we have to add any new items that were written in.
+      if params[:added] != 0
+        for i in 1..params[:added].to_i
+          @n = "name.new." + i.to_s
+          @p = "price.new." + i.to_s
+          @inv = "inventory.new." + i.to_s
+          @des = "description.new." + i.to_s
+          if params[@n] && params[@p] && params[@inv] && params[@des]
+            Product.create(:name => params[@n].to_s, :price => params[@p].to_f, :inventory => params[@inv].to_i, :description => params[@des].to_s)
+          end
+        end
+      end
     end
+  end
+  
+  def delete 
+    logger.debug("Delete item: " + params[:prod_id].to_s)
+    p = Product.where(:id => params[:prod_id]).first
+    if p != nil
+      p.delete
+    end
+    redirect_to "/admin/items" and return
   end
 end

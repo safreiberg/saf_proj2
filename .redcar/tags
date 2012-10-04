@@ -1,6 +1,7 @@
-1349374130
+1349379128
 AddAdminToUsers	/home/saf/projects/saf_proj2/db/migrate/20121004153733_add_admin_to_users.rb	class AddAdminToUsers 
 AddAuthenticatedToUsers	/home/saf/projects/saf_proj2/db/migrate/20121004014426_add_authenticated_to_users.rb	class AddAuthenticatedToUsers 
+AddPriceToOrders	/home/saf/projects/saf_proj2/db/migrate/20121004181405_add_price_to_orders.rb	class AddPriceToOrders 
 AddSessionsTable	/home/saf/projects/saf_proj2/db/migrate/20121002033419_add_sessions_table.rb	class AddSessionsTable 
 AdminController	/home/saf/projects/saf_proj2/app/controllers/admin_controller.rb	class AdminController 
 AdminControllerTest	/home/saf/projects/saf_proj2/test/functional/admin_controller_test.rb	class AdminControllerTest 
@@ -17,6 +18,7 @@ CartHelper	/home/saf/projects/saf_proj2/app/helpers/cart_helper.rb	module CartHe
 CartHelperTest	/home/saf/projects/saf_proj2/test/unit/helpers/cart_helper_test.rb	class CartHelperTest 
 CartTest	/home/saf/projects/saf_proj2/test/unit/cart_test.rb	class CartTest 
 CreateCarts	/home/saf/projects/saf_proj2/db/migrate/20121002013907_create_carts.rb	class CreateCarts 
+CreateOrders	/home/saf/projects/saf_proj2/db/migrate/20121004181110_create_orders.rb	class CreateOrders 
 CreateProductOrders	/home/saf/projects/saf_proj2/db/migrate/20121001200240_create_product_orders.rb	class CreateProductOrders 
 CreateProducts	/home/saf/projects/saf_proj2/db/migrate/20121001200222_create_products.rb	class CreateProducts 
 CreateUsers	/home/saf/projects/saf_proj2/db/migrate/20121002014845_create_users.rb	class CreateUsers 
@@ -24,6 +26,8 @@ ItemController	/home/saf/projects/saf_proj2/app/controllers/item_controller.rb	c
 ItemControllerTest	/home/saf/projects/saf_proj2/test/functional/item_controller_test.rb	class ItemControllerTest 
 ItemHelper	/home/saf/projects/saf_proj2/app/helpers/item_helper.rb	module ItemHelper
 ItemHelperTest	/home/saf/projects/saf_proj2/test/unit/helpers/item_helper_test.rb	class ItemHelperTest 
+Order	/home/saf/projects/saf_proj2/app/models/order.rb	class Order 
+OrderTest	/home/saf/projects/saf_proj2/test/unit/order_test.rb	class OrderTest 
 Product	/home/saf/projects/saf_proj2/app/models/product.rb	class Product 
 ProductOrder	/home/saf/projects/saf_proj2/app/models/product_order.rb	class ProductOrder 
 ProductOrderTest	/home/saf/projects/saf_proj2/test/unit/product_order_test.rb	class ProductOrderTest 
@@ -54,6 +58,8 @@ change	/home/saf/projects/saf_proj2/db/migrate/20121002033419_add_sessions_table
 change	/home/saf/projects/saf_proj2/db/migrate/20121002014845_create_users.rb	  def change
 change	/home/saf/projects/saf_proj2/db/migrate/20121004014426_add_authenticated_to_users.rb	  def change
 change	/home/saf/projects/saf_proj2/db/migrate/20121004153733_add_admin_to_users.rb	  def change
+change	/home/saf/projects/saf_proj2/db/migrate/20121004181110_create_orders.rb	  def change
+change	/home/saf/projects/saf_proj2/db/migrate/20121004181405_add_price_to_orders.rb	  def change
 changePassword	/home/saf/projects/saf_proj2/app/models/user.rb	  def changePassword(p)
 change_quantity	/home/saf/projects/saf_proj2/app/models/product_order.rb	  def change_quantity(quant)
 checkAuth	/home/saf/projects/saf_proj2/app/controllers/application_controller.rb	  def checkAuth
@@ -65,6 +71,7 @@ clear	/home/saf/projects/saf_proj2/app/models/cart.rb	  def clear
 create	/home/saf/projects/saf_proj2/app/controllers/sessions_controller.rb	  def create
 create	/home/saf/projects/saf_proj2/app/controllers/users_controller.rb	  def create
 current_user	/home/saf/projects/saf_proj2/app/controllers/application_controller.rb	  def current_user
+delete	/home/saf/projects/saf_proj2/app/controllers/admin_controller.rb	  def delete 
 destroy	/home/saf/projects/saf_proj2/app/controllers/sessions_controller.rb	  def destroy
 index	/home/saf/projects/saf_proj2/app/controllers/welcome_controller.rb	  def index
 items	/home/saf/projects/saf_proj2/app/controllers/admin_controller.rb	  def items

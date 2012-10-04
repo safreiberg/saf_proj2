@@ -1,3 +1,38 @@
 <h1>Admin#orders</h1>
 <p>Find me in app/views/admin/orders.html.erb</p>
 
+  <% if session[:authenticated] == false %>
+  <p>Currently you are known as Guest. You can sign in <a href="/login">here</a>.</p>
+  <% else %>
+  <p>Hi, <%= session[:user_id]%>.</p>
+  <p>You can also <a href="/logout">logout</a> if that's not you!</p>
+  <% end %>
+
+  <div class="flash">
+    <%- if !notice.nil? -%>
+    <p class="notice"><%= notice %></p>
+    <%- end -%>
+    <%- if !alert.nil? -%>
+    <p class="alert"><%= alert %></p>
+    <%- end -%>
+  </div>
+
+  <table border="1">
+    <tr>
+      <th>Product ID</th>
+      <th>User ID</th>
+      <th>ID</th>
+      <th>Product Quantity</th>
+      <th>Price</th>
+      <th>Submitted</th>
+    </tr>
+    <% Order.find(:all).each do |order| %>
+    <tr>
+      <td><%= order.product_id %></td>
+      <td><%= order.user_id %></td>
+      <td><%= order.id %></td>
+      <td><%= order.product_quantity %></td>
+      <td><%= order.price %></td>
+      <td><%= order.created_at %></td>
+    </tr><% end %>
+  </table>

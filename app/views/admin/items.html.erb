@@ -17,13 +17,14 @@
   </div>
 
 <form action="/admin/items" method="post">
-  <table border="1">
+  <table border="1" id="product_form_table">
     <tr>
       <th>Name</th>
       <th>Price</th>
       <th>ID</th>
       <th>Inventory</th>
       <th>Description</th>
+      <th></th>
     </tr>
     <% Product.find(:all).each do |product| %>
     <tr>
@@ -32,9 +33,13 @@
       <td><%= product.id %></td>
       <td><input type="text" size="5" value="<%= product.inventory %>" name="<%=product.id%>.inventory"></td>
       <td><input type="text" size="20" value="<%= product.description %>" name="<%=product.id%>.description"></td>
+      <td><%= button_to('Delete',{ :action => "delete", :prod_id => product.id } , :confirm => 'Are you sure?', :method => :post) %></td>
     </tr><% end %>
   </table>
   <input type="hidden" name="update" value="true">
   <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>" />
+  <input name="added" id="added" type="hidden" value="">
   <input type="submit" value="Update">
 </form>
+
+<button type="button" onclick="addrow()">Add Row</button>

@@ -8,6 +8,8 @@
 #  password_digest :string(255)
 #  created_at      :datetime         not null
 #  updated_at      :datetime         not null
+#  authenticated   :boolean
+#  admin           :boolean
 #
 
 class User < ActiveRecord::Base

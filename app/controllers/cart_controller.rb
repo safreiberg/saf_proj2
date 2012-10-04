@@ -7,10 +7,10 @@ class CartController < ApplicationController
   def view
     ## This is the "adding orders" part.
     if params[:quantity] && params[:product_id]
-      if prod_ord = ProductOrder.where(:cart_id => session[:cart], :product_id => params[:product_id]).first
+      if prod_ord = ProductOrder.where(:cart_id => session[:cart].id, :product_id => params[:product_id]).first
         prod_ord.change_quantity(prod_ord.quantity.to_i + params[:quantity].to_i)
       else
-        prod_ord = ProductOrder.create(:cart_id => session[:cart], :quantity => params[:quantity], :product_id => params[:product_id])
+        prod_ord = ProductOrder.create(:cart_id => session[:cart].id, :quantity => params[:quantity], :product_id => params[:product_id])
       end
     end
     ## This is the update part
@@ -26,6 +26,16 @@ class CartController < ApplicationController
   end
 
   def checkout
+    ## Here's where we add stuff to the orders page.
+    ProductOrder.where(:cart_id => session[:cart].id).each do |po|
+      @prod = Product.where(:id => po.product_id).first
+      logger.debug("Inspecting product order: " + po.id.to_s)
+      if po != nil && @prod != nil
+        logger.debug("Creating Order.")
+        @price = @prod.price.to_f * po.quantity.to_f
+        Order.create(:user_id => session[:cart].user_id, :product_id => po.product_id, :product_quantity => po.quantity, :price => @price)
+      end
+    end
     session[:cart].checkout
   end
   
