@@ -36,6 +36,9 @@ gem 'bcrypt-ruby', '~> 3.0.0'
 # To use the "bundle exec annotate" command.
 gem 'annotate'
 
+# To use db:push
+gem 'taps'
+
 # To use Jbuilder templates for JSON
 # gem 'jbuilder'
 
