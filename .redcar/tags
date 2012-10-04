@@ -1,4 +1,4 @@
-1349366284
+1349374130
 AddAdminToUsers	/home/saf/projects/saf_proj2/db/migrate/20121004153733_add_admin_to_users.rb	class AddAdminToUsers 
 AddAuthenticatedToUsers	/home/saf/projects/saf_proj2/db/migrate/20121004014426_add_authenticated_to_users.rb	class AddAuthenticatedToUsers 
 AddSessionsTable	/home/saf/projects/saf_proj2/db/migrate/20121002033419_add_sessions_table.rb	class AddSessionsTable 
@@ -77,7 +77,9 @@ remove_from_cart	/home/saf/projects/saf_proj2/app/models/product_order.rb	  def 
 specs	/home/saf/projects/saf_proj2/app/controllers/cart_controller.rb	  def specs
 stuff_in_cart	/home/saf/projects/saf_proj2/app/controllers/users_controller.rb	  def stuff_in_cart
 test_homepage	/home/saf/projects/saf_proj2/test/performance/browsing_test.rb	  def test_homepage
+update_description	/home/saf/projects/saf_proj2/app/models/product.rb	  def update_description(des)
 update_inventory	/home/saf/projects/saf_proj2/app/models/product.rb	  def update_inventory(amount) 
+update_name	/home/saf/projects/saf_proj2/app/models/product.rb	  def update_name(name)
 update_price	/home/saf/projects/saf_proj2/app/models/product.rb	  def update_price(cost)
 view	/home/saf/projects/saf_proj2/app/controllers/cart_controller.rb	  def view
 zoom	/home/saf/projects/saf_proj2/app/controllers/item_controller.rb	  def zoom

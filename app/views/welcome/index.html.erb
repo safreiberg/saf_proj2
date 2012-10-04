@@ -23,5 +23,6 @@
 
 <% u = User.where(:id => session[:user_id]).first %>
 <% if u != nil && u.admin %>
-<p>View the <a href="/admin">admin</a> page.</p>
+<p>View the <a href="/admin/items">admin</a> page.</p>
+<p>View the <a href="/admin/orders">orders</a> page.</p>
 <% end %>

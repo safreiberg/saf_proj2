@@ -1,2 +1,40 @@
 <h1>Admin#items</h1>
 <p>Find me in app/views/admin/items.html.erb</p>
+  <% if session[:authenticated] == false %>
+  <p>Currently you are known as Guest. You can sign in <a href="/login">here</a>.</p>
+  <% else %>
+  <p>Hi, <%= session[:user_id]%>.</p>
+  <p>You can also <a href="/logout">logout</a> if that's not you!</p>
+  <% end %>
+
+  <div class="flash">
+    <%- if !notice.nil? -%>
+    <p class="notice"><%= notice %></p>
+    <%- end -%>
+    <%- if !alert.nil? -%>
+    <p class="alert"><%= alert %></p>
+    <%- end -%>
+  </div>
+
+<form action="/admin/items" method="post">
+  <table border="1">
+    <tr>
+      <th>Name</th>
+      <th>Price</th>
+      <th>ID</th>
+      <th>Inventory</th>
+      <th>Description</th>
+    </tr>
+    <% Product.find(:all).each do |product| %>
+    <tr>
+      <td><input type="text" size="10" value="<%= product.name %>" name="<%=product.id%>.name"></td>
+      <td><input type="text" size="5" value="<%= product.price %>" name="<%=product.id%>.price"></td>
+      <td><%= product.id %></td>
+      <td><input type="text" size="5" value="<%= product.inventory %>" name="<%=product.id%>.inventory"></td>
+      <td><input type="text" size="20" value="<%= product.description %>" name="<%=product.id%>.description"></td>
+    </tr><% end %>
+  </table>
+  <input type="hidden" name="update" value="true">
+  <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>" />
+  <input type="submit" value="Update">
+</form>

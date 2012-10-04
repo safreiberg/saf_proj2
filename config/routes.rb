@@ -2,7 +2,8 @@ SafProj2::Application.routes.draw do
   
   get "admin/orders"
 
-  get "admin/items"
+  get "admin/items" => "admin#items"
+  post "admin/items" => "admin#items"
 
   resources :users
   

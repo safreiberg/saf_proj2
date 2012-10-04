@@ -28,4 +28,15 @@ class Product < ActiveRecord::Base
     self.price = cost
     self.save
   end
+  
+  def update_name(name)
+    logger.debug("Updating name: " + name.to_s)
+    self.name = name
+    self.save
+  end
+  
+  def update_description(des)
+    self.description = des
+    self.save
+  end
 end
