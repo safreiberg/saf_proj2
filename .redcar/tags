@@ -1,4 +1,5 @@
-1349318702
+1349365615
+AddAdminToUsers	/home/saf/projects/saf_proj2/db/migrate/20121004153733_add_admin_to_users.rb	class AddAdminToUsers 
 AddAuthenticatedToUsers	/home/saf/projects/saf_proj2/db/migrate/20121004014426_add_authenticated_to_users.rb	class AddAuthenticatedToUsers 
 AddSessionsTable	/home/saf/projects/saf_proj2/db/migrate/20121002033419_add_sessions_table.rb	class AddSessionsTable 
 Application	/home/saf/projects/saf_proj2/config/application.rb	  class Application 
@@ -48,6 +49,7 @@ change	/home/saf/projects/saf_proj2/db/migrate/20121002013907_create_carts.rb	  
 change	/home/saf/projects/saf_proj2/db/migrate/20121002033419_add_sessions_table.rb	  def change
 change	/home/saf/projects/saf_proj2/db/migrate/20121002014845_create_users.rb	  def change
 change	/home/saf/projects/saf_proj2/db/migrate/20121004014426_add_authenticated_to_users.rb	  def change
+change	/home/saf/projects/saf_proj2/db/migrate/20121004153733_add_admin_to_users.rb	  def change
 changePassword	/home/saf/projects/saf_proj2/app/models/user.rb	  def changePassword(p)
 change_quantity	/home/saf/projects/saf_proj2/app/models/product_order.rb	  def change_quantity(quant)
 checkAuth	/home/saf/projects/saf_proj2/app/controllers/application_controller.rb	  def checkAuth
@@ -55,14 +57,14 @@ check_cart	/home/saf/projects/saf_proj2/app/controllers/application_controller.r
 checkout	/home/saf/projects/saf_proj2/app/models/cart.rb	  def checkout
 checkout	/home/saf/projects/saf_proj2/app/controllers/cart_controller.rb	  def checkout
 clear	/home/saf/projects/saf_proj2/app/models/cart.rb	  def clear
-create	/home/saf/projects/saf_proj2/app/controllers/users_controller.rb	  def create
 create	/home/saf/projects/saf_proj2/app/controllers/sessions_controller.rb	  def create
+create	/home/saf/projects/saf_proj2/app/controllers/users_controller.rb	  def create
 current_user	/home/saf/projects/saf_proj2/app/controllers/application_controller.rb	  def current_user
 destroy	/home/saf/projects/saf_proj2/app/controllers/sessions_controller.rb	  def destroy
 index	/home/saf/projects/saf_proj2/app/controllers/welcome_controller.rb	  def index
 list	/home/saf/projects/saf_proj2/app/controllers/item_controller.rb	  def list
-new	/home/saf/projects/saf_proj2/app/controllers/users_controller.rb	  def new
 new	/home/saf/projects/saf_proj2/app/controllers/sessions_controller.rb	  def new
+new	/home/saf/projects/saf_proj2/app/controllers/users_controller.rb	  def new
 remove	/home/saf/projects/saf_proj2/app/models/cart.rb	  def remove(prod_ord)
 remove_from_cart	/home/saf/projects/saf_proj2/app/models/product_order.rb	  def remove_from_cart
 specs	/home/saf/projects/saf_proj2/app/controllers/cart_controller.rb	  def specs

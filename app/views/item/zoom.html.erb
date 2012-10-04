@@ -24,7 +24,7 @@
   
   <%= form_tag("/cart/view", :method => "post") do %>
   <%= label_tag(:quantity, "Quantity:") %>
-  <%= text_field_tag(:quantity) %>
+  <%= text_field_tag(:quantity, 1, :size => 1) %>
   <%= hidden_field_tag(:product_id, product.id)%>
   <%= submit_tag("Add!") %>
   <% end %>

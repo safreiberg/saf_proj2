@@ -34,7 +34,7 @@
     <tr>
       <td><a href="/item/zoom/<%= prod.name %>"><%= prod.name %></a></td>
       <td><%= prod.price %></td>
-      <td><input type="text" value="<%= po.quantity %>" name="<%=prod.id%>.quantity"></td>
+      <td><input type="text" size="3" value="<%= po.quantity %>" name="<%=prod.id%>.quantity"></td>
       <td><%= prod.price.to_f * po.quantity.to_f %></td>
     </tr><% end %>
   </table>

@@ -11,3 +11,4 @@ Product.create(:inventory => 4800, :price => 9.95, :name => "Trash Bin", :descri
 Product.create(:inventory => 12, :price => 98.99, :name => "Expensive Wine", :description => "From the finest distilleries.")
 Product.create(:inventory => 88, :price => 12.40, :name => "Red Pens", :description => "Lots of them!")
 Product.create(:inventory => 53, :price => 2100, :name => "MacBook Pro", :description => "An expensive laptop.")
+

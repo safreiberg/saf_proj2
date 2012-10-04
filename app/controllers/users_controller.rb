@@ -15,8 +15,7 @@ class UsersController < ApplicationController
       stuff_in_cart
       flash[:notice] = "Your account has been created."
       session[:authenticated] = true
-      render '/welcome/index'
-      return
+      render '/welcome/index' and return
     else
       ## Let's attempt to log the user in, since they weren't able to create an account.
       ## This means that either 
@@ -32,23 +31,20 @@ class UsersController < ApplicationController
         stuff_in_cart
         flash[:notice] = "You already had an account. We went ahead and signed you in :)."
         session[:authenticated] = true
-        render '/welcome/index'
-        return
+        redirect_to '/welcome/index' and return
       elseif user
         ##    Case 2.
         logger.debug("Signin failed.")
         if @user = User.where(:email => params[:user][:email]).first
           flash[:notice] = "That user already exists."
           session[:authenticated] = false
-          render '/users/new'
-          return
+          render '/users/new' and return
         end
       else
         flash[:notice] = "Password confirmation was incorrect."
         session[:authenticated] = false
         logger.debug("Couldn't even log them in.")
-        render '/users/new'
-        return
+        render '/users/new' and return
       end
     end
   end
