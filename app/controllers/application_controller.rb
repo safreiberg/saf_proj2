@@ -11,6 +11,7 @@ class ApplicationController < ActionController::Base
   def checkAuth
     if !session[:user_id]
       session[:user_id] = Zlib.crc32(request.remote_ip)
+      session[:authenticated] = false
     end
     logger.debug("Current user: " + session[:user_id].to_s)
   end

@@ -3,11 +3,11 @@
   <h1>Item#list</h1>
   <p>Find me in app/views/item/list.html.erb</p>
 
-  <% if session[:user_id].to_s.include? "." %>
-  <p>You can sign in <a href="/login">here</a>.</p>
+  <% if session[:authenticated] == false %>
+  <p>Currently you are known as Guest. You can sign in <a href="/login">here</a>.</p>
   <% else %>
-  <p>Hi, <%= session[:user_id]%>. Here's your cart:</p>
-  <p>You can also <a href="/logout">logout</a>.</p>
+  <p>Hi, <%= session[:user_id]%>.</p>
+  <p>You can also <a href="/logout">logout</a> if that's not you!</p>
   <% end %>
 
   <p><a href="/cart/view">My Cart</a></p>

@@ -12,7 +12,9 @@ class UsersController < ApplicationController
     if @user.save
       logger.debug("Your account has been created")
       session[:user_id] = @user.id
+      stuff_in_cart
       flash[:notice] = "Your account has been created."
+      session[:authenticated] = true
       render '/welcome/index'
       return
     else
@@ -27,7 +29,9 @@ class UsersController < ApplicationController
       if user && user.authenticate(params[:user][:password])
         ##    This is case 1.
         session[:user_id] = user.id
+        stuff_in_cart
         flash[:notice] = "You already had an account. We went ahead and signed you in :)."
+        session[:authenticated] = true
         render '/welcome/index'
         return
       elseif user
@@ -35,17 +39,32 @@ class UsersController < ApplicationController
         logger.debug("Signin failed.")
         if @user = User.where(:email => params[:user][:email]).first
           flash[:notice] = "That user already exists."
+          session[:authenticated] = false
           render '/users/new'
           return
         end
       else
         flash[:notice] = "Password confirmation was incorrect."
+        session[:authenticated] = false
         logger.debug("Couldn't even log them in.")
         render '/users/new'
         return
       end
     end
   end
-
+  
+  def stuff_in_cart
+    @cart = Cart.where(:user_id => session[:user_id]).first
+      if @cart == nil
+        redirect_to root_url, :notice => "Successfully logged in."
+        return
+      else
+        ProductOrder.where(:cart_id => session[:cart].id).each do |po| 
+          po.add_to_cart(@cart.id) 
+          po.save
+        end
+      end
+      session[:cart] = @cart
+  end
 
 end

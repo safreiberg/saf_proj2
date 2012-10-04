@@ -1,5 +1,5 @@
 class SessionsController < ApplicationController
-  after_filter :check_cart
+  after_filter :checkAuth, :check_cart
 
   def new
   end
@@ -25,8 +25,9 @@ class SessionsController < ApplicationController
           po.add_to_cart(@cart.id) 
           po.save
         end
-        
       end
+      session[:cart] = @cart
+      session[:authenticated] = true
       redirect_to root_url, :notice => "Successfully logged in."
       return
     else
@@ -40,6 +41,7 @@ class SessionsController < ApplicationController
   def destroy
     session[:user_id] = nil
     session[:cart] = nil
+    session[:authenticated] = false
     redirect_to root_url :notice => "Logged out"
   end
 

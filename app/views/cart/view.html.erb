@@ -1,12 +1,12 @@
 <h1>Cart#view</h1>
 <p>Find me in app/views/cart/view.html.erb</p>
 
-<% if session[:user_id].to_s.include? "." %>
-<p>You can sign in <a href="/login">here</a>.</p>
-<% else %>
-<p>Hi, <%= session[:user_id]%>. Here's your cart:</p>
-<p>You can also <a href="/logout">logout</a>.</p>
-<% end %>
+  <% if session[:authenticated] == false %>
+  <p>Currently you are known as Guest. You can sign in <a href="/login">here</a>.</p>
+  <% else %>
+  <p>Hi, <%= session[:user_id]%>. Here's your cart:</p>
+  <p>You can also <a href="/logout">logout</a>.</p>
+  <% end %>
 
 <p>Back to <a href="/item/list">list</a>.</p>
 
@@ -19,7 +19,7 @@
     <%- end -%>     
 </div>
 
-
+<% if ProductOrder.where(:cart_id => session[:cart].id).first != nil%>
 <p>Cart Contents:</p>
 <form action="/cart/view">
   <table border="1">
@@ -38,5 +38,9 @@
       <td><%= prod.price.to_f * po.quantity.to_f %></td>
     </tr><% end %>
   </table>
+  <input type="hidden" name="update" value="true">
   <input type="submit" value="Update">
+<% else %>
+<p>Your cart appears to be empty. Go buy some stuff :).</p>
+<% end %>
 </form>

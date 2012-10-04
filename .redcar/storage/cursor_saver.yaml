@@ -36,9 +36,6 @@ cursor_positions:
   - :path: deliverables/Thumbs.db
     :cursor_offset: 0
     :timestamp: 2012-10-01 15:53:59 -04:00
-  - :path: README.md
-    :cursor_offset: 675
-    :timestamp: 2012-10-01 22:40:41 -04:00
   - :path: config/initializers/session_store.rb
     :cursor_offset: 124
     :timestamp: 2012-10-01 23:34:49 -04:00
@@ -51,9 +48,6 @@ cursor_positions:
   - :path: app/views/user/create.html.erb
     :cursor_offset: 69
     :timestamp: 2012-10-02 14:49:49 -04:00
-  - :path: db/migrate/20121002014845_create_users.rb
-    :cursor_offset: 182
-    :timestamp: 2012-10-02 15:20:53 -04:00
   - :path: app/models/user.rb
     :cursor_offset: 98
     :timestamp: 2012-10-02 21:13:54 -04:00
@@ -117,4 +111,13 @@ cursor_positions:
   - :path: app/controllers/cart_controller.rb
     :cursor_offset: 849
     :timestamp: 2012-10-03 14:29:10 -04:00
+  - :path: README.md
+    :cursor_offset: 675
+    :timestamp: 2012-10-01 22:40:41 -04:00
+  - :path: db/migrate/20121002014845_create_users.rb
+    :cursor_offset: 182
+    :timestamp: 2012-10-02 15:20:53 -04:00
+  - :path: db/migrate/20121004014426_add_authenticated_to_users.rb
+    :cursor_offset: 116
+    :timestamp: 2012-10-03 21:46:35 -04:00
 files_to_retain: 0
