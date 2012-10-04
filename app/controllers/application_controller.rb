@@ -8,6 +8,17 @@ class ApplicationController < ActionController::Base
     @_current_user ||= session[:user_id] && User.find_by_id(session[:user_id])
   end
   
+  def check_admin
+    if session[:user_id]
+      u = User.where(:id => session[:user_id]).first
+      if u != nil && u.admin
+        return true
+      end
+    end
+    ## badness
+    redirect_to "/welcome" and return false
+  end
+  
   def checkAuth
     if !session[:user_id]
       session[:user_id] = Zlib.crc32(request.remote_ip)

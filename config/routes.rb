@@ -1,5 +1,9 @@
 SafProj2::Application.routes.draw do
   
+  get "admin/orders"
+
+  get "admin/items"
+
   resources :users
   
   get "user/create" => "users#create"

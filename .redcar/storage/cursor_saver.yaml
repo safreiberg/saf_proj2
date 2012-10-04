@@ -54,15 +54,6 @@ cursor_positions:
   - :path: config/routes.rb
     :cursor_offset: 180
     :timestamp: 2012-10-02 20:49:51 -04:00
-  - :path: db/seeds.rb
-    :cursor_offset: 853
-    :timestamp: 2012-10-02 22:25:00 -04:00
-  - :path: app/controllers/welcome_controller.rb
-    :cursor_offset: 102
-    :timestamp: 2012-10-03 13:47:49 -04:00
-  - :path: README.md
-    :cursor_offset: 675
-    :timestamp: 2012-10-01 22:40:41 -04:00
   - :path: db/migrate/20121002014845_create_users.rb
     :cursor_offset: 182
     :timestamp: 2012-10-02 15:20:53 -04:00
@@ -72,18 +63,9 @@ cursor_positions:
   - :path: app/controllers/cart_controller.rb
     :cursor_offset: 998
     :timestamp: 2012-10-03 22:19:41 -04:00
-  - :path: app/views/cart/view.html.erb
-    :cursor_offset: 329
-    :timestamp: 2012-10-03 21:59:34 -04:00
   - :path: app/controllers/item_controller.rb
     :cursor_offset: 99
     :timestamp: 2012-10-02 20:59:34 -04:00
-  - :path: app/views/item/list.html.erb
-    :cursor_offset: 524
-    :timestamp: 2012-10-03 22:00:10 -04:00
-  - :path: app/views/item/zoom.html.erb
-    :cursor_offset: 884
-    :timestamp: 2012-10-03 22:00:23 -04:00
   - :path: app/models/cart.rb
     :cursor_offset: 369
     :timestamp: 2012-10-02 22:23:49 -04:00
@@ -92,15 +74,6 @@ cursor_positions:
   - :path: app/controllers/sessions_controller.rb
     :cursor_offset: 1508
     :timestamp: 2012-10-03 22:10:05 -04:00
-  - :path: app/controllers/application_controller.rb
-    :cursor_offset: 430
-    :timestamp: 2012-10-03 21:55:57 -04:00
-  - :path: app/models/user.rb
-    :cursor_offset: 412
-    :timestamp: 2012-10-03 21:52:56 -04:00
-  - :path: app/controllers/users_controller.rb
-    :cursor_offset: 1327
-    :timestamp: 2012-10-03 22:09:34 -04:00
   - :path: app/views/cart/checkout.html.erb
     :cursor_offset: 0
     :timestamp: 2012-10-01 21:58:56 -04:00
@@ -125,4 +98,34 @@ cursor_positions:
   - :path: app/models/product.rb
     :cursor_offset: 567
     :timestamp: 2012-10-02 22:23:49 -04:00
+  - :path: app/controllers/users_controller.rb
+    :cursor_offset: 31
+    :timestamp: 2012-10-04 11:50:58 -04:00
+  - :path: db/seeds.rb
+    :cursor_offset: 924
+    :timestamp: 2012-10-04 11:36:32 -04:00
+  - :path: app/views/item/zoom.html.erb
+    :cursor_offset: 921
+    :timestamp: 2012-10-04 11:33:37 -04:00
+  - :path: app/views/item/list.html.erb
+    :cursor_offset: 524
+    :timestamp: 2012-10-03 22:00:10 -04:00
+  - :path: app/views/cart/view.html.erb
+    :cursor_offset: 939
+    :timestamp: 2012-10-04 11:26:06 -04:00
+  - :path: README.md
+    :cursor_offset: 675
+    :timestamp: 2012-10-01 22:40:41 -04:00
+  - :path: db/migrate/20121004153733_add_admin_to_users.rb
+    :cursor_offset: 60
+    :timestamp: 2012-10-04 11:37:41 -04:00
+  - :path: app/controllers/welcome_controller.rb
+    :cursor_offset: 102
+    :timestamp: 2012-10-03 13:47:49 -04:00
+  - :path: app/models/user.rb
+    :cursor_offset: 420
+    :timestamp: 2012-10-04 11:40:43 -04:00
+  - :path: app/controllers/application_controller.rb
+    :cursor_offset: 430
+    :timestamp: 2012-10-03 21:55:57 -04:00
 files_to_retain: 0
