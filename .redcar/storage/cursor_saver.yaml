@@ -48,9 +48,6 @@ cursor_positions:
   - :path: app/views/user/create.html.erb
     :cursor_offset: 69
     :timestamp: 2012-10-02 14:49:49 -04:00
-  - :path: Gemfile
-    :cursor_offset: 613
-    :timestamp: 2012-10-02 22:23:45 -04:00
   - :path: db/migrate/20121002014845_create_users.rb
     :cursor_offset: 182
     :timestamp: 2012-10-02 15:20:53 -04:00
@@ -93,9 +90,6 @@ cursor_positions:
   - :path: app/views/item/list.html.erb
     :cursor_offset: 975
     :timestamp: 2012-10-04 12:11:21 -04:00
-  - :path: config/routes.rb
-    :cursor_offset: 46
-    :timestamp: 2012-10-04 13:38:36 -04:00
   - :path: app/models/cart.rb
     :cursor_offset: 0
     :timestamp: 2012-10-03 22:29:13 -04:00
@@ -111,17 +105,6 @@ cursor_positions:
   - :path: app/controllers/welcome_controller.rb
     :cursor_offset: 102
     :timestamp: 2012-10-03 13:47:49 -04:00
-  - :path: app/models/product.rb
-    :cursor_offset: 774
-    :timestamp: 2012-10-04 14:04:57 -04:00
-  - :path: app/views/admin/items.html.erb
-    :cursor_offset: 70
-    :timestamp: 2012-10-04 14:09:14 -04:00
-    :selection_offset: 1460
-    :block_selection_mode: false
-  - :path: app/controllers/admin_controller.rb
-    :cursor_offset: 824
-    :timestamp: 2012-10-04 14:07:30 -04:00
   - :path: app/views/cart/view.html.erb
     :cursor_offset: 1219
     :timestamp: 2012-10-04 11:26:06 -04:00
@@ -143,4 +126,22 @@ cursor_positions:
   - :path: app/assets/javascripts/admin.js.coffee
     :cursor_offset: 229
     :timestamp: 2012-10-04 14:37:07 -04:00
+  - :path: app/views/admin/items.html.erb
+    :cursor_offset: 1362
+    :timestamp: 2012-10-04 15:27:12 -04:00
+  - :path: Gemfile
+    :cursor_offset: 927
+    :timestamp: 2012-10-03 21:04:13 -04:00
+  - :path: config/routes.rb
+    :cursor_offset: 175
+    :timestamp: 2012-10-04 15:27:45 -04:00
+  - :path: app/controllers/admin_controller.rb
+    :cursor_offset: 1562
+    :timestamp: 2012-10-04 15:31:28 -04:00
+  - :path: app/models/product.rb
+    :cursor_offset: 17
+    :timestamp: 2012-10-04 14:04:57 -04:00
+  - :path: app/assets/javascripts/application.js
+    :cursor_offset: 4
+    :timestamp: 2012-10-04 15:04:22 -04:00
 files_to_retain: 0

@@ -14,6 +14,8 @@
 //= require jquery_ujs
 //= require_tree .
 
+//= require bootstrap
+
 added = 0
 
 addrow = function() {
