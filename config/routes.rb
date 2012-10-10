@@ -5,6 +5,10 @@ SafProj2::Application.routes.draw do
   get "admin/items" => "admin#items"
   post "admin/items" => "admin#items"
   post "admin/delete" => "admin#delete"
+  get "users/edit" => "users#edit"
+  post "users/edit" => "users#edit"
+  get "users/change" => "users#change"
+  post "users/change" => "users#change"
 
   resources :users
   

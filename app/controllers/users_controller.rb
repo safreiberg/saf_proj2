@@ -5,6 +5,31 @@ class UsersController < ApplicationController
   def new
     @user = User.new
   end
+  
+  def edit
+    @user = User.new
+  end
+  
+  def change
+    user = User.find_by_id(session[:user_id])
+    if session[:authenticated] && user && user.authenticate(params[:user][:oldpass])
+      user.password = params[:user][:password]
+      user.password_confirmation = params[:user][:password_confirmation]
+      if user.save
+        flash[:notice] = "Successfully changed password."
+        logger.debug("Changed password.")
+        redirect_to "/welcome/index"
+        return true
+      else
+        logger.debug("User wouldn't save.")
+        render :action => "edit"
+      end
+    else
+      logger.debug("User couldn't authenticate.")
+      redirect_to "/welcome/index"
+      return false
+    end
+  end
 
   def create
     @user = User.new(params[:user])

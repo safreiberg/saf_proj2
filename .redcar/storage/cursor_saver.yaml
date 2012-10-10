@@ -45,9 +45,6 @@ cursor_positions:
   - :path: app/views/sessions/new.html.erb
     :cursor_offset: 739
     :timestamp: 2012-10-03 13:37:59 -04:00
-  - :path: app/views/users/create.html.erb
-    :cursor_offset: 269
-    :timestamp: 2012-10-02 15:51:07 -04:00
   - :path: app/views/users/new.html.erb
     :cursor_offset: 650
     :timestamp: 2012-10-02 16:56:38 -04:00
@@ -168,4 +165,7 @@ cursor_positions:
   - :path: app/controllers/users_controller.rb
     :cursor_offset: 1252
     :timestamp: 2012-10-10 01:25:14 -04:00
+  - :path: app/views/users/create.html.erb
+    :cursor_offset: 269
+    :timestamp: 2012-10-02 15:51:07 -04:00
 files_to_retain: 0

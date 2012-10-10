@@ -1,0 +1,29 @@
+<h1>User#edit</h1>
+<p>Find me in app/views/user/edit.html.erb</p>
+
+<div class="flash">
+    <%- if !notice.nil? -%>
+    <p class="notice"><%= notice %></p>
+    <%- end -%> 
+    <%- if !alert.nil? -%>
+    <p class="alert"><%= alert %></p>
+    <%- end -%>     
+</div>
+
+<%= form_for @user, :url => "/users/change" do |f| %>
+<div class="field">
+  <%= f.label :old_password %>
+  <%= f.password_field :oldpass %>
+<div>
+<div class="field">
+  <%= f.label :new_password %>
+  <%= f.password_field :password %>
+<div>
+<div class="field">
+  <%= f.label :password_confirmation %>
+  <%= f.password_field :password_confirmation %>
+<div>
+<div class="actions">
+  <%= submit_tag "Update" %>
+<div>
+<% end %>
