@@ -1,4 +1,4 @@
-1349723428
+1349845023
 AddAdminToUsers	/home/saf/projects/saf_proj2/db/migrate/20121004153733_add_admin_to_users.rb	class AddAdminToUsers 
 AddAuthenticatedToUsers	/home/saf/projects/saf_proj2/db/migrate/20121004014426_add_authenticated_to_users.rb	class AddAuthenticatedToUsers 
 AddPriceToOrders	/home/saf/projects/saf_proj2/db/migrate/20121004181405_add_price_to_orders.rb	class AddPriceToOrders 
@@ -53,13 +53,13 @@ add_to_cart	/home/saf/projects/saf_proj2/app/models/product_order.rb	  def add_t
 assign	/home/saf/projects/saf_proj2/app/models/cart.rb	  def assign(user)
 change	/home/saf/projects/saf_proj2/db/migrate/20121001200222_create_products.rb	  def change
 change	/home/saf/projects/saf_proj2/db/migrate/20121001200240_create_product_orders.rb	  def change
-change	/home/saf/projects/saf_proj2/db/migrate/20121002013907_create_carts.rb	  def change
 change	/home/saf/projects/saf_proj2/db/migrate/20121002033419_add_sessions_table.rb	  def change
-change	/home/saf/projects/saf_proj2/db/migrate/20121002014845_create_users.rb	  def change
 change	/home/saf/projects/saf_proj2/db/migrate/20121004014426_add_authenticated_to_users.rb	  def change
 change	/home/saf/projects/saf_proj2/db/migrate/20121004153733_add_admin_to_users.rb	  def change
 change	/home/saf/projects/saf_proj2/db/migrate/20121004181110_create_orders.rb	  def change
 change	/home/saf/projects/saf_proj2/db/migrate/20121004181405_add_price_to_orders.rb	  def change
+change	/home/saf/projects/saf_proj2/db/migrate/20121002014845_create_users.rb	  def change
+change	/home/saf/projects/saf_proj2/db/migrate/20121002013907_create_carts.rb	  def change
 changePassword	/home/saf/projects/saf_proj2/app/models/user.rb	  def changePassword(p)
 change_quantity	/home/saf/projects/saf_proj2/app/models/product_order.rb	  def change_quantity(quant)
 checkAuth	/home/saf/projects/saf_proj2/app/controllers/application_controller.rb	  def checkAuth
