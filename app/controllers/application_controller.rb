@@ -16,7 +16,8 @@ class ApplicationController < ActionController::Base
       end
     end
     ## badness
-    redirect_to "/welcome" and return false
+    redirect_to "/welcome"
+    return false
   end
   
   def checkAuth
