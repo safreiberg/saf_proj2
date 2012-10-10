@@ -1,8 +1,3 @@
 --- 
-open_files: 
-  - app/views/admin/items.html.erb
-  - app/assets/javascripts/application.js
-  - app/models/product.rb
-  - app/controllers/admin_controller.rb
-  - config/routes.rb
-  - Gemfile
+open_files: []
+
