@@ -39,9 +39,6 @@ cursor_positions:
   - :path: app/views/user/create.html.erb
     :cursor_offset: 69
     :timestamp: 2012-10-02 14:49:49 -04:00
-  - :path: app/controllers/sessions_controller.rb
-    :cursor_offset: 1508
-    :timestamp: 2012-10-03 22:10:05 -04:00
   - :path: app/views/sessions/create.html.erb
     :cursor_offset: 376
     :timestamp: 2012-10-02 21:55:45 -04:00
@@ -63,9 +60,6 @@ cursor_positions:
   - :path: README.md
     :cursor_offset: 675
     :timestamp: 2012-10-01 22:40:41 -04:00
-  - :path: db/migrate/20121004153733_add_admin_to_users.rb
-    :cursor_offset: 60
-    :timestamp: 2012-10-04 11:37:41 -04:00
   - :path: app/models/user.rb
     :cursor_offset: 420
     :timestamp: 2012-10-04 11:40:43 -04:00
@@ -96,9 +90,6 @@ cursor_positions:
   - :path: app/models/product.rb
     :cursor_offset: 17
     :timestamp: 2012-10-04 14:04:57 -04:00
-  - :path: app/controllers/application_controller.rb
-    :cursor_offset: 68
-    :timestamp: 2012-10-10 01:16:44 -04:00
   - :path: app/controllers/cart_controller.rb
     :cursor_offset: 459
     :timestamp: 2012-10-04 14:31:57 -04:00
@@ -132,34 +123,49 @@ cursor_positions:
   - :path: app/views/cart/view.html.erb
     :cursor_offset: 767
     :timestamp: 2012-10-10 00:31:51 -04:00
-  - :path: db/migrate/20121002014845_create_users.rb
-    :cursor_offset: 120
-    :timestamp: 2012-10-10 00:44:12 -04:00
-  - :path: db/migrate/20121001200222_create_products.rb
-    :cursor_offset: 161
-    :timestamp: 2012-10-01 21:34:31 -04:00
-  - :path: db/migrate/20121001200240_create_product_orders.rb
-    :cursor_offset: 242
-    :timestamp: 2012-10-01 21:37:36 -04:00
-  - :path: db/migrate/20121002013907_create_carts.rb
-    :cursor_offset: 125
-    :timestamp: 2012-10-10 00:53:58 -04:00
-  - :path: db/migrate/20121004014426_add_authenticated_to_users.rb
-    :cursor_offset: 116
-    :timestamp: 2012-10-03 21:46:35 -04:00
-  - :path: db/migrate/20121002033419_add_sessions_table.rb
-    :cursor_offset: 0
-    :timestamp: 2012-10-01 23:34:19 -04:00
   - :path: app/controllers/welcome_controller.rb
     :cursor_offset: 102
     :timestamp: 2012-10-03 13:47:49 -04:00
-  - :path: app/controllers/users_controller.rb
-    :cursor_offset: 515
-    :timestamp: 2012-10-10 01:15:58 -04:00
   - :path: app/views/welcome/index.html.erb
     :cursor_offset: 802
     :timestamp: 2012-10-04 14:08:23 -04:00
   - :path: app/controllers/admin_controller.rb
     :cursor_offset: 1562
     :timestamp: 2012-10-04 15:31:28 -04:00
+  - :path: db/migrate/20121004181405_add_price_to_orders.rb
+    :cursor_offset: 111
+    :timestamp: 2012-10-10 01:29:05 -04:00
+  - :path: db/migrate/20121004181110_create_orders.rb
+    :cursor_offset: 215
+    :timestamp: 2012-10-10 01:29:01 -04:00
+  - :path: db/migrate/20121004153733_add_admin_to_users.rb
+    :cursor_offset: 60
+    :timestamp: 2012-10-04 11:37:41 -04:00
+  - :path: db/migrate/20121004014426_add_authenticated_to_users.rb
+    :cursor_offset: 116
+    :timestamp: 2012-10-03 21:46:35 -04:00
+  - :path: db/migrate/20121002033419_add_sessions_table.rb
+    :cursor_offset: 0
+    :timestamp: 2012-10-01 23:34:19 -04:00
+  - :path: db/migrate/20121002014845_create_users.rb
+    :cursor_offset: 120
+    :timestamp: 2012-10-10 00:44:12 -04:00
+  - :path: db/migrate/20121002013907_create_carts.rb
+    :cursor_offset: 158
+    :timestamp: 2012-10-10 01:28:47 -04:00
+  - :path: db/migrate/20121001200240_create_product_orders.rb
+    :cursor_offset: 255
+    :timestamp: 2012-10-10 01:28:43 -04:00
+  - :path: db/migrate/20121001200222_create_products.rb
+    :cursor_offset: 133
+    :timestamp: 2012-10-10 01:28:33 -04:00
+  - :path: app/controllers/sessions_controller.rb
+    :cursor_offset: 561
+    :timestamp: 2012-10-10 01:26:07 -04:00
+  - :path: app/controllers/application_controller.rb
+    :cursor_offset: 1022
+    :timestamp: 2012-10-10 01:16:44 -04:00
+  - :path: app/controllers/users_controller.rb
+    :cursor_offset: 1252
+    :timestamp: 2012-10-10 01:25:14 -04:00
 files_to_retain: 0
