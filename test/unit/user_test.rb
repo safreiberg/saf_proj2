@@ -15,7 +15,17 @@
 require 'test_helper'
 
 class UserTest < ActiveSupport::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
+  
+  def test_change_password
+    u = users(:user17)
+    
+    u.changePassword "17"
+    p = BCrypt::Password.new(u.password_digest)
+    assert (p == "17")
+    
+    ## Shouldn't accept nil.
+    u.changePassword nil
+    p = BCrypt::Password.new(u.password_digest)
+    assert (p == "17")
+  end
 end

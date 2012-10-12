@@ -1,4 +1,4 @@
-1350064627
+1350065316
 AddAdminToUsers	/home/saf/projects/saf_proj2/db/migrate/20121004153733_add_admin_to_users.rb	class AddAdminToUsers 
 AddAuthenticatedToUsers	/home/saf/projects/saf_proj2/db/migrate/20121004014426_add_authenticated_to_users.rb	class AddAuthenticatedToUsers 
 AddPriceToOrders	/home/saf/projects/saf_proj2/db/migrate/20121004181405_add_price_to_orders.rb	class AddPriceToOrders 
@@ -92,6 +92,7 @@ test_add_two_prod_ords_same_prod	/home/saf/projects/saf_proj2/test/unit/cart_tes
 test_add_unique_product	/home/saf/projects/saf_proj2/test/unit/cart_test.rb	  def test_add_unique_product
 test_assign	/home/saf/projects/saf_proj2/test/unit/cart_test.rb	  def test_assign
 test_cart_creation	/home/saf/projects/saf_proj2/test/unit/cart_test.rb	  def test_cart_creation
+test_change_password	/home/saf/projects/saf_proj2/test/unit/user_test.rb	  def test_change_password
 test_change_quantity	/home/saf/projects/saf_proj2/test/unit/product_order_test.rb	  def test_change_quantity
 test_checkout	/home/saf/projects/saf_proj2/test/unit/cart_test.rb	  def test_checkout
 test_clear	/home/saf/projects/saf_proj2/test/unit/cart_test.rb	  def test_clear
