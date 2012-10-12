@@ -8,12 +8,17 @@ https://stellar.mit.edu/S/course/6/fa12/6.170/courseMaterial/topics/topic2/proje
 
 ###Heroku URL
 
-Please put it here: http://sampleapp.herokuapp.com
+Please put it here: powerful-scrubland-1233.herokuapp.com
+
+Note: There is an admin account created already:
+username: admin
+password: admin
 
 ###Notes
 
 Any instructions or notes for your grader should be placed here.
 
+There are some items for sale already in the store. Feel free to poke around :).
 
 ###Code Deliverables
 
