@@ -16,12 +16,17 @@ class ProductOrder < ActiveRecord::Base
   validates :product_id, :presence => true
   validates :quantity, :presence => true
   validates :cart_id, :presence => true
+  validates :quantity, :length => { :minimum => 0 }
   
   def add_to_cart(new_cart_id)
     po = ProductOrder.where(:product_id => self.product_id, :cart_id => new_cart_id).where('product_orders.id != ?',self.id).first
     if po == nil
-      self.cart_id = new_cart_id
-      self.save
+      if self.quantity == 0
+        self.destroy
+      else
+        self.cart_id = new_cart_id
+        self.save
+      end
     else
       po.change_quantity(po.quantity + self.quantity)
       self.destroy

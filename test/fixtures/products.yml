@@ -26,3 +26,10 @@ product_two:
   id: 2
   name: "Item Two"
   description: "The second product."  
+
+product_three:
+  inventory: 100
+  price: 104.4
+  id: 3
+  name: "item 3"
+  description: "item 3 des"

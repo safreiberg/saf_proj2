@@ -1,3 +1,9 @@
 --- 
 open_files: 
+  - app/models/product_order.rb
+  - test/unit/product_order_test.rb
+  - app/models/user.rb
+  - test/unit/user_test.rb
+  - test/unit/product_test.rb
+  - test/unit/order_test.rb
   - test/unit/cart_test.rb
