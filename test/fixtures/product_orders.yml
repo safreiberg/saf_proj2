@@ -11,11 +11,3 @@
 #
 
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
-
-one:
-  product: 1
-  quantity: 1
-
-two:
-  product: 1
-  quantity: 1

@@ -1,4 +1,4 @@
-1349851076
+1350003797
 AddAdminToUsers	/home/saf/projects/saf_proj2/db/migrate/20121004153733_add_admin_to_users.rb	class AddAdminToUsers 
 AddAuthenticatedToUsers	/home/saf/projects/saf_proj2/db/migrate/20121004014426_add_authenticated_to_users.rb	class AddAuthenticatedToUsers 
 AddPriceToOrders	/home/saf/projects/saf_proj2/db/migrate/20121004181405_add_price_to_orders.rb	class AddPriceToOrders 
@@ -26,6 +26,7 @@ ItemController	/home/saf/projects/saf_proj2/app/controllers/item_controller.rb	c
 ItemControllerTest	/home/saf/projects/saf_proj2/test/functional/item_controller_test.rb	class ItemControllerTest 
 ItemHelper	/home/saf/projects/saf_proj2/app/helpers/item_helper.rb	module ItemHelper
 ItemHelperTest	/home/saf/projects/saf_proj2/test/unit/helpers/item_helper_test.rb	class ItemHelperTest 
+LoginAddToCartPurchaseLogoutTest	/home/saf/projects/saf_proj2/test/integration/login_add_to_cart_purchase_logout_test.rb	class LoginAddToCartPurchaseLogoutTest 
 Order	/home/saf/projects/saf_proj2/app/models/order.rb	class Order 
 OrderTest	/home/saf/projects/saf_proj2/test/unit/order_test.rb	class OrderTest 
 Product	/home/saf/projects/saf_proj2/app/models/product.rb	class Product 
@@ -39,11 +40,11 @@ SessionsHelper	/home/saf/projects/saf_proj2/app/helpers/sessions_helper.rb	modul
 SessionsHelperTest	/home/saf/projects/saf_proj2/test/unit/helpers/sessions_helper_test.rb	class SessionsHelperTest 
 TestCase	/home/saf/projects/saf_proj2/test/test_helper.rb	class ActiveSupport::TestCase
 User	/home/saf/projects/saf_proj2/app/models/user.rb	class User 
-UserControllerTest	/home/saf/projects/saf_proj2/test/functional/user_controller_test.rb	class UserControllerTest 
 UserHelper	/home/saf/projects/saf_proj2/app/helpers/user_helper.rb	module UserHelper
 UserHelperTest	/home/saf/projects/saf_proj2/test/unit/helpers/user_helper_test.rb	class UserHelperTest 
 UserTest	/home/saf/projects/saf_proj2/test/unit/user_test.rb	class UserTest 
 UsersController	/home/saf/projects/saf_proj2/app/controllers/users_controller.rb	class UsersController 
+UsersControllerTest	/home/saf/projects/saf_proj2/test/functional/users_controller_test.rb	class UsersControllerTest 
 WelcomeController	/home/saf/projects/saf_proj2/app/controllers/welcome_controller.rb	class WelcomeController 
 WelcomeControllerTest	/home/saf/projects/saf_proj2/test/functional/welcome_controller_test.rb	class WelcomeControllerTest 
 WelcomeHelper	/home/saf/projects/saf_proj2/app/helpers/welcome_helper.rb	module WelcomeHelper
@@ -85,7 +86,18 @@ remove	/home/saf/projects/saf_proj2/app/models/cart.rb	  def remove(prod_ord)
 remove_from_cart	/home/saf/projects/saf_proj2/app/models/product_order.rb	  def remove_from_cart
 specs	/home/saf/projects/saf_proj2/app/controllers/cart_controller.rb	  def specs
 stuff_in_cart	/home/saf/projects/saf_proj2/app/controllers/users_controller.rb	  def stuff_in_cart
-test_homepage	/home/saf/projects/saf_proj2/test/performance/browsing_test.rb	  def test_homepage
+test_add_two_prod_ords_same_prod	/home/saf/projects/saf_proj2/test/unit/cart_test.rb	  def test_add_two_prod_ords_same_prod
+test_add_unique_product	/home/saf/projects/saf_proj2/test/unit/cart_test.rb	  def test_add_unique_product
+test_cart_creation	/home/saf/projects/saf_proj2/test/unit/cart_test.rb	  def test_cart_creation
+test_get_index	/home/saf/projects/saf_proj2/test/functional/welcome_controller_test.rb	  def test_get_index
+test_login_admin	/home/saf/projects/saf_proj2/test/functional/sessions_controller_test.rb	  def test_login_admin
+test_login_badpass	/home/saf/projects/saf_proj2/test/functional/sessions_controller_test.rb	  def test_login_badpass
+test_login_logout	/home/saf/projects/saf_proj2/test/functional/sessions_controller_test.rb	  def test_login_logout
+test_login_normal_user	/home/saf/projects/saf_proj2/test/functional/sessions_controller_test.rb	  def test_login_normal_user
+test_user_creation_already_existing	/home/saf/projects/saf_proj2/test/functional/users_controller_test.rb	  def test_user_creation_already_existing
+test_user_creation_already_existing_wrong_confirmation	/home/saf/projects/saf_proj2/test/functional/users_controller_test.rb	  def test_user_creation_already_existing_wrong_confirmation
+test_user_creation_bad_confirmation	/home/saf/projects/saf_proj2/test/functional/users_controller_test.rb	  def test_user_creation_bad_confirmation
+test_user_creation_correct	/home/saf/projects/saf_proj2/test/functional/users_controller_test.rb	  def test_user_creation_correct
 update_description	/home/saf/projects/saf_proj2/app/models/product.rb	  def update_description(des)
 update_inventory	/home/saf/projects/saf_proj2/app/models/product.rb	  def update_inventory(amount) 
 update_name	/home/saf/projects/saf_proj2/app/models/product.rb	  def update_name(name)

@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
 
   after_filter :check_cart
+  after_filter :checkAuth
   
   def new
     @user = User.new
@@ -79,16 +80,14 @@ class UsersController < ApplicationController
   
   def stuff_in_cart
     @cart = Cart.where(:user_id => session[:user_id]).first
-      if @cart == nil
-        redirect_to root_url, :notice => "Successfully logged in."
-        return
-      else
-        ProductOrder.where(:cart_id => session[:cart].id).each do |po| 
-          po.add_to_cart(@cart.id) 
-          po.save
-        end
+    if @cart == nil || session[:cart].nil?
+    else  
+      ProductOrder.where(:cart_id => session[:cart].id).each do |po| 
+        po.add_to_cart(@cart.id) 
+        po.save
       end
-      session[:cart] = @cart
+    end
+    session[:cart] = @cart
   end
 
 end

@@ -1,5 +1,6 @@
 class SessionsController < ApplicationController
-  after_filter :checkAuth, :check_cart
+  after_filter :checkAuth
+  after_filter :check_cart
 
   def new
   end
@@ -17,7 +18,8 @@ class SessionsController < ApplicationController
       session[:user_id] = user.id
       ##  Time to check if there's a cart.
       @cart = Cart.where(:user_id => session[:user_id]).first
-      if @cart == nil
+      if @cart == nil || session[:cart].nil?
+        session[:authenticated] = true
         redirect_to root_url, :notice => "Successfully logged in."
         return
       else

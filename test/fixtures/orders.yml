@@ -12,13 +12,3 @@
 #
 
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
-
-one:
-  user_id: 1
-  product_id: 1
-  product_quantity: 1
-
-two:
-  user_id: 1
-  product_id: 1
-  product_quantity: 1

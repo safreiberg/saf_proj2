@@ -14,14 +14,20 @@
 
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
-one:
+stephen:
   id: 1
-  name: MyString
-  email: MyString
-  password: MyString
-
-two:
-  id: 1
-  name: MyString
-  email: MyString
-  password: MyString
+  name: "Stephen Freiberg"
+  email: "saf"
+  password_digest: <%= BCrypt::Password.create("a") %>
+  
+admin:
+  id: 2
+  name: "Administrator"
+  email: "admin"
+  password_digest: <%= BCrypt::Password.create("admin") %>
+  admin: "true"
+  
+user17:
+  id: 17
+  email: "num17"
+  password_digest: <%= BCrypt::Password.create("num17") %>
