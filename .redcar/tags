@@ -1,4 +1,4 @@
-1350010780
+1350011317
 AddAdminToUsers	/home/saf/projects/saf_proj2/db/migrate/20121004153733_add_admin_to_users.rb	class AddAdminToUsers 
 AddAuthenticatedToUsers	/home/saf/projects/saf_proj2/db/migrate/20121004014426_add_authenticated_to_users.rb	class AddAuthenticatedToUsers 
 AddPriceToOrders	/home/saf/projects/saf_proj2/db/migrate/20121004181405_add_price_to_orders.rb	class AddPriceToOrders 
@@ -98,13 +98,17 @@ test_login_admin	/home/saf/projects/saf_proj2/test/functional/sessions_controlle
 test_login_badpass	/home/saf/projects/saf_proj2/test/functional/sessions_controller_test.rb	  def test_login_badpass
 test_login_logout	/home/saf/projects/saf_proj2/test/functional/sessions_controller_test.rb	  def test_login_logout
 test_login_normal_user	/home/saf/projects/saf_proj2/test/functional/sessions_controller_test.rb	  def test_login_normal_user
+test_update_inventory	/home/saf/projects/saf_proj2/test/unit/product_test.rb	  def test_update_inventory
 test_user_creation_already_existing	/home/saf/projects/saf_proj2/test/functional/users_controller_test.rb	  def test_user_creation_already_existing
 test_user_creation_already_existing_wrong_confirmation	/home/saf/projects/saf_proj2/test/functional/users_controller_test.rb	  def test_user_creation_already_existing_wrong_confirmation
 test_user_creation_bad_confirmation	/home/saf/projects/saf_proj2/test/functional/users_controller_test.rb	  def test_user_creation_bad_confirmation
 test_user_creation_correct	/home/saf/projects/saf_proj2/test/functional/users_controller_test.rb	  def test_user_creation_correct
 update_description	/home/saf/projects/saf_proj2/app/models/product.rb	  def update_description(des)
+update_description	/home/saf/projects/saf_proj2/test/unit/product_test.rb	  def update_description
 update_inventory	/home/saf/projects/saf_proj2/app/models/product.rb	  def update_inventory(amount) 
 update_name	/home/saf/projects/saf_proj2/app/models/product.rb	  def update_name(name)
+update_name	/home/saf/projects/saf_proj2/test/unit/product_test.rb	  def update_name
 update_price	/home/saf/projects/saf_proj2/app/models/product.rb	  def update_price(cost)
+update_price	/home/saf/projects/saf_proj2/test/unit/product_test.rb	  def update_price
 view	/home/saf/projects/saf_proj2/app/controllers/cart_controller.rb	  def view
 zoom	/home/saf/projects/saf_proj2/app/controllers/item_controller.rb	  def zoom
