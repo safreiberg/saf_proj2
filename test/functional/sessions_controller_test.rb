@@ -12,7 +12,7 @@ class SessionsControllerTest < ActionController::TestCase
     assert_redirected_to root_url, "Correct login will redirect to root_url."
     assert_equal true, session[:authenticated], "After login, session should indicate an authenticated user."
   end
-  
+    
   ## Tests an admin login. This should not be different from above.
   def test_login_admin
     post :create, :email => "admin", :password => "admin" 

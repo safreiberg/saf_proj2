@@ -44,7 +44,4 @@ class UsersControllerTest < ActionController::TestCase
     assert_not_nil session[:cart], "session[:cart] should never be nil."
     assert_equal true, session[:authenticated], "After login, session should indicate an authenticated user."
   end
-  
-  ## TODO make tests that transfer cart items.
-  ## TODO make tests that authenticate users that have stuff in their carts already.
 end

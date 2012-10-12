@@ -33,12 +33,6 @@ cursor_positions:
   - :path: app/views/user/create.html.erb
     :cursor_offset: 69
     :timestamp: 2012-10-02 14:49:49 -04:00
-  - :path: app/views/sessions/create.html.erb
-    :cursor_offset: 376
-    :timestamp: 2012-10-02 21:55:45 -04:00
-  - :path: app/views/sessions/new.html.erb
-    :cursor_offset: 739
-    :timestamp: 2012-10-03 13:37:59 -04:00
   - :path: db/seeds.rb
     :cursor_offset: 924
     :timestamp: 2012-10-04 11:36:32 -04:00
@@ -155,15 +149,6 @@ cursor_positions:
   - :path: test/unit/helpers/admin_helper_test.rb
     :cursor_offset: 0
     :timestamp: 2012-10-04 11:55:21 -04:00
-  - :path: test/functional/admin_controller_test.rb
-    :cursor_offset: 79
-    :timestamp: 2012-10-11 11:37:59 -04:00
-  - :path: test/functional/cart_controller_test.rb
-    :cursor_offset: 77
-    :timestamp: 2012-10-11 11:38:05 -04:00
-  - :path: test/functional/item_controller_test.rb
-    :cursor_offset: 76
-    :timestamp: 2012-10-11 11:38:10 -04:00
   - :path: test/functional/user_controller_test.rb
     :cursor_offset: 77
     :timestamp: 2012-10-11 11:38:18 -04:00
@@ -173,9 +158,6 @@ cursor_positions:
   - :path: test/integration/login_add_to_cart_purchase_logout_test.rb
     :cursor_offset: 152
     :timestamp: 2012-10-11 16:06:01 -04:00
-  - :path: app/controllers/sessions_controller.rb
-    :cursor_offset: 98
-    :timestamp: 2012-10-11 16:21:50 -04:00
   - :path: app/controllers/item_controller.rb
     :cursor_offset: 99
     :timestamp: 2012-10-02 20:59:34 -04:00
@@ -191,15 +173,6 @@ cursor_positions:
   - :path: app/controllers/welcome_controller.rb
     :cursor_offset: 128
     :timestamp: 2012-10-03 13:47:49 -04:00
-  - :path: test/functional/welcome_controller_test.rb
-    :cursor_offset: 375
-    :timestamp: 2012-10-11 16:26:56 -04:00
-  - :path: test/functional/sessions_controller_test.rb
-    :cursor_offset: 7
-    :timestamp: 2012-10-11 16:29:24 -04:00
-  - :path: test/functional/users_controller_test.rb
-    :cursor_offset: 1547
-    :timestamp: 2012-10-11 16:45:27 -04:00
   - :path: app/controllers/users_controller.rb
     :cursor_offset: 791
     :timestamp: 2012-10-11 16:40:21 -04:00
@@ -238,13 +211,40 @@ cursor_positions:
   - :path: app/models/product_order.rb
     :cursor_offset: 839
     :timestamp: 2012-10-12 13:50:32 -04:00
-  - :path: test/fixtures/users.yml
-    :cursor_offset: 689
-    :timestamp: 2012-10-12 14:00:27 -04:00
   - :path: test/unit/user_test.rb
     :cursor_offset: 606
     :timestamp: 2012-10-12 14:08:34 -04:00
   - :path: app/models/user.rb
     :cursor_offset: 681
     :timestamp: 2012-10-04 14:11:50 -04:00
+  - :path: test/functional/admin_controller_test.rb
+    :cursor_offset: 79
+    :timestamp: 2012-10-11 11:37:59 -04:00
+  - :path: test/functional/cart_controller_test.rb
+    :cursor_offset: 77
+    :timestamp: 2012-10-11 11:38:05 -04:00
+  - :path: test/functional/welcome_controller_test.rb
+    :cursor_offset: 375
+    :timestamp: 2012-10-11 16:26:56 -04:00
+  - :path: test/functional/users_controller_test.rb
+    :cursor_offset: 2229
+    :timestamp: 2012-10-12 14:16:25 -04:00
+  - :path: test/functional/item_controller_test.rb
+    :cursor_offset: 76
+    :timestamp: 2012-10-11 11:38:10 -04:00
+  - :path: test/fixtures/users.yml
+    :cursor_offset: 689
+    :timestamp: 2012-10-12 14:00:27 -04:00
+  - :path: app/views/sessions/new.html.erb
+    :cursor_offset: 645
+    :timestamp: 2012-10-03 13:37:59 -04:00
+  - :path: app/views/sessions/create.html.erb
+    :cursor_offset: 376
+    :timestamp: 2012-10-02 21:55:45 -04:00
+  - :path: test/functional/sessions_controller_test.rb
+    :cursor_offset: 669
+    :timestamp: 2012-10-12 14:16:13 -04:00
+  - :path: app/controllers/sessions_controller.rb
+    :cursor_offset: 588
+    :timestamp: 2012-10-12 14:34:25 -04:00
 files_to_retain: 0
