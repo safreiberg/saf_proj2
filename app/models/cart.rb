@@ -33,6 +33,9 @@ class Cart < ActiveRecord::Base
   end
 
   def assign(user)
+    if user.nil?
+      return
+    end
     self.user_id = user
     self.save
   end

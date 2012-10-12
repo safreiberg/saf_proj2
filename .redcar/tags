@@ -1,4 +1,4 @@
-1350003797
+1350010780
 AddAdminToUsers	/home/saf/projects/saf_proj2/db/migrate/20121004153733_add_admin_to_users.rb	class AddAdminToUsers 
 AddAuthenticatedToUsers	/home/saf/projects/saf_proj2/db/migrate/20121004014426_add_authenticated_to_users.rb	class AddAuthenticatedToUsers 
 AddPriceToOrders	/home/saf/projects/saf_proj2/db/migrate/20121004181405_add_price_to_orders.rb	class AddPriceToOrders 
@@ -67,8 +67,8 @@ change_quantity	/home/saf/projects/saf_proj2/app/models/product_order.rb	  def c
 checkAuth	/home/saf/projects/saf_proj2/app/controllers/application_controller.rb	  def checkAuth
 check_admin	/home/saf/projects/saf_proj2/app/controllers/application_controller.rb	  def check_admin
 check_cart	/home/saf/projects/saf_proj2/app/controllers/application_controller.rb	  def check_cart
-checkout	/home/saf/projects/saf_proj2/app/models/cart.rb	  def checkout
 checkout	/home/saf/projects/saf_proj2/app/controllers/cart_controller.rb	  def checkout
+checkout	/home/saf/projects/saf_proj2/app/models/cart.rb	  def checkout
 clear	/home/saf/projects/saf_proj2/app/models/cart.rb	  def clear
 create	/home/saf/projects/saf_proj2/app/controllers/sessions_controller.rb	  def create
 create	/home/saf/projects/saf_proj2/app/controllers/users_controller.rb	  def create
@@ -86,9 +86,13 @@ remove	/home/saf/projects/saf_proj2/app/models/cart.rb	  def remove(prod_ord)
 remove_from_cart	/home/saf/projects/saf_proj2/app/models/product_order.rb	  def remove_from_cart
 specs	/home/saf/projects/saf_proj2/app/controllers/cart_controller.rb	  def specs
 stuff_in_cart	/home/saf/projects/saf_proj2/app/controllers/users_controller.rb	  def stuff_in_cart
+test_add_remove	/home/saf/projects/saf_proj2/test/unit/cart_test.rb	  def test_add_remove
 test_add_two_prod_ords_same_prod	/home/saf/projects/saf_proj2/test/unit/cart_test.rb	  def test_add_two_prod_ords_same_prod
 test_add_unique_product	/home/saf/projects/saf_proj2/test/unit/cart_test.rb	  def test_add_unique_product
+test_assign	/home/saf/projects/saf_proj2/test/unit/cart_test.rb	  def test_assign
 test_cart_creation	/home/saf/projects/saf_proj2/test/unit/cart_test.rb	  def test_cart_creation
+test_checkout	/home/saf/projects/saf_proj2/test/unit/cart_test.rb	  def test_checkout
+test_clear	/home/saf/projects/saf_proj2/test/unit/cart_test.rb	  def test_clear
 test_get_index	/home/saf/projects/saf_proj2/test/functional/welcome_controller_test.rb	  def test_get_index
 test_login_admin	/home/saf/projects/saf_proj2/test/functional/sessions_controller_test.rb	  def test_login_admin
 test_login_badpass	/home/saf/projects/saf_proj2/test/functional/sessions_controller_test.rb	  def test_login_badpass
