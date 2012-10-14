@@ -14,35 +14,35 @@
 ActiveRecord::Schema.define(:version => 20121004181405) do
 
   create_table "carts", :force => true do |t|
-    t.integer  "user_id"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.integer  "user_id",    :limit => 8
+    t.datetime "created_at",              :null => false
+    t.datetime "updated_at",              :null => false
   end
 
   create_table "orders", :force => true do |t|
-    t.integer  "user_id"
-    t.integer  "product_id"
-    t.integer  "product_quantity"
-    t.datetime "created_at",       :null => false
-    t.datetime "updated_at",       :null => false
+    t.integer  "user_id",          :limit => 8
+    t.integer  "product_id",       :limit => 8
+    t.integer  "product_quantity", :limit => 8
+    t.datetime "created_at",                    :null => false
+    t.datetime "updated_at",                    :null => false
     t.float    "price"
   end
 
   create_table "product_orders", :force => true do |t|
-    t.integer  "product_id"
-    t.integer  "quantity"
-    t.integer  "cart_id"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.integer  "product_id", :limit => 8
+    t.integer  "quantity",   :limit => 8
+    t.integer  "cart_id",    :limit => 8
+    t.datetime "created_at",              :null => false
+    t.datetime "updated_at",              :null => false
   end
 
   create_table "products", :force => true do |t|
-    t.integer  "inventory"
+    t.integer  "inventory",   :limit => 8
     t.float    "price"
     t.string   "name"
     t.text     "description"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
+    t.datetime "created_at",               :null => false
+    t.datetime "updated_at",               :null => false
   end
 
   create_table "sessions", :force => true do |t|

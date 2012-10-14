@@ -1,0 +1,9 @@
+class SafMailer < ActionMailer::Base
+  default from: "saf.proj2.6170@gmail.com"
+  
+  def welcome_email(user)
+    @user = user
+    @url = "powerful-scrubland-1233.herokuapp.com/welcome"
+    mail(:to => user.email, :subject => "Welcome to SAFPROJ2.")
+  end
+end
