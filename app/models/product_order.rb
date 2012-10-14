@@ -40,6 +40,14 @@ class ProductOrder < ActiveRecord::Base
   end
   
   def change_quantity(quant)
+    if quant > Product.find_by_id(self.product_id).inventory
+      quant = Product.find_by_id(self.product_id).inventory
+      flash[:notice] = "You attempted to purchase more than the inventory, so we decreased your order to the max."
+    end
+    if quant < 0
+      prod_ord.quantity = 1
+      flash[:notice] = "You must buy at least one! Silly goose."
+    end
     self.quantity = quant
     self.save
     if self.quantity == 0
