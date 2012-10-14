@@ -28,6 +28,14 @@ class CartController < ApplicationController
       params.each do |key, value| 
         if (key.to_s[/.*quantity/])
           po = ProductOrder.where(:product_id => key.to_s.chomp(".quantity"), :cart_id => session[:cart].id).first
+          if value > Product.find_by_id(self.product_id).inventory
+            value = Product.find_by_id(self.product_id).inventory
+            flash[:notice] = "You attempted to purchase more than the inventory, so we decreased your order to the max."
+          end
+          if value < 0
+            value = 1
+            flash[:notice] = "You must buy at least one! Silly goose."
+          end
           po.change_quantity(value)
         end
       end
