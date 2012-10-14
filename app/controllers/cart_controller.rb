@@ -38,7 +38,7 @@ class CartController < ApplicationController
     end
     user = User.find_by_id(session[:user_id])
     if !user.nil? && user.email
-      SafMailer.checkout(session[:user_id]).deliver
+      SafMailer.checkout(user).deliver
     end
     session[:cart].checkout
   end
