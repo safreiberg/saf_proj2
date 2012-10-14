@@ -6,11 +6,20 @@ class CartController < ApplicationController
   
   def view
     ## This is the "adding orders" part.
+    prod_ord = nil
     if params[:quantity] && params[:product_id]
       if prod_ord = ProductOrder.where(:cart_id => session[:cart].id, :product_id => params[:product_id]).first
         prod_ord.change_quantity(prod_ord.quantity.to_i + params[:quantity].to_i)
       else
         prod_ord = ProductOrder.create(:cart_id => session[:cart].id, :quantity => params[:quantity], :product_id => params[:product_id])
+      end
+      if prod_ord.quantity > Product.find_by_id(prod_ord).inventory
+        prod_ord.quantity = Product.find_by_id(prod_ord).inventory
+        flash[:notice] = "You attempted to purchase more than the inventory, so we decreased your order to the max."
+      end
+      if prod_ord.quantity < 0
+        prod_ord.quantity = 1
+        flash[:notice] = "You must buy at least one! Silly goose."
       end
     end
     ## This is the update part
