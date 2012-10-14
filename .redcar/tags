@@ -1,4 +1,4 @@
-1350258879
+1350259028
 AddAdminToUsers	/home/saf/projects/saf_proj2/db/migrate/20121004153733_add_admin_to_users.rb	class AddAdminToUsers 
 AddAuthenticatedToUsers	/home/saf/projects/saf_proj2/db/migrate/20121004014426_add_authenticated_to_users.rb	class AddAuthenticatedToUsers 
 AddPriceToOrders	/home/saf/projects/saf_proj2/db/migrate/20121004181405_add_price_to_orders.rb	class AddPriceToOrders 
