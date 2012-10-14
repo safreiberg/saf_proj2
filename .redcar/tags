@@ -1,4 +1,4 @@
-1350249997
+1350250172
 AddAdminToUsers	/home/saf/projects/saf_proj2/db/migrate/20121004153733_add_admin_to_users.rb	class AddAdminToUsers 
 AddAuthenticatedToUsers	/home/saf/projects/saf_proj2/db/migrate/20121004014426_add_authenticated_to_users.rb	class AddAuthenticatedToUsers 
 AddPriceToOrders	/home/saf/projects/saf_proj2/db/migrate/20121004181405_add_price_to_orders.rb	class AddPriceToOrders 
@@ -70,8 +70,8 @@ checkAuth	/home/saf/projects/saf_proj2/app/controllers/application_controller.rb
 check_admin	/home/saf/projects/saf_proj2/app/controllers/application_controller.rb	  def check_admin
 check_cart	/home/saf/projects/saf_proj2/app/controllers/application_controller.rb	  def check_cart
 checkout	/home/saf/projects/saf_proj2/app/models/cart.rb	  def checkout
+checkout	/home/saf/projects/saf_proj2/app/mailers/saf_mailer.rb	  def checkout(user)
 checkout	/home/saf/projects/saf_proj2/app/controllers/cart_controller.rb	  def checkout
-checkout	/home/saf/projects/saf_proj2/app/mailers/saf_mailer.rb	  def checkout(uid)
 clear	/home/saf/projects/saf_proj2/app/models/cart.rb	  def clear
 create	/home/saf/projects/saf_proj2/app/controllers/sessions_controller.rb	  def create
 create	/home/saf/projects/saf_proj2/app/controllers/user_controller.rb	  def create

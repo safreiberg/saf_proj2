@@ -36,7 +36,10 @@ class CartController < ApplicationController
         o = Order.create(:user_id => session[:cart].user_id, :product_id => po.product_id, :product_quantity => po.quantity, :price => @price)
       end
     end
-    SafMailer.checkout(session[:user_id]).deliver
+    user = User.find_by_id(session[:user_id])
+    if !user.nil? && user.email
+      SafMailer.checkout(session[:user_id]).deliver
+    end
     session[:cart].checkout
   end
   
