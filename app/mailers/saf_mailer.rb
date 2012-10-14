@@ -9,6 +9,8 @@ class SafMailer < ActionMailer::Base
   
   def checkout(uid)
     @user = User.find_by_id(uid)
-    mail(:to => @user.email, :subject => "SAFPROJ2 checkout confirmation")
+    if !@user.nil? && @user.email
+      mail(:to => @user.email, :subject => "SAFPROJ2 checkout confirmation")
+    end
   end
 end
