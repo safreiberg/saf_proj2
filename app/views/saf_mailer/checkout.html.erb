@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  </head>
+  <body>
+    <h1>Checkout confirmation</h1>
+    <p>
+      You have just checked out, and this is your checkout 
+      confirmation.<br/>
+    </p>
+    <table border="1">
+    <tr>
+      <th>Name</th>
+      <th>Price</th>
+      <th>Quantity</th>
+      <th>Subtotal</th>
+    </tr>
+    <% cid = Cart.find_by_user_id(@user.id)%>
+    <% sum = 0 %>
+    <% ProductOrder.where(:cart_id => cid).each do |po| %>
+    <% p = Product.find_by_id(po.product_id)%>
+    <tr>
+      <td><%= p.name %></td>
+      <td><%= p.price %></td>
+      <td><%= po.quantity %></td>
+      <td><%= p.price.to_f * po.quantity.to_f %></td>
+      <% sum = sum + (p.price.to_f * po.quantity.to_f)%>
+    </tr>
+    <% end %>
+    </table>
+    <p>Total: <%= sum.to_f%></p>
+    <p>Thanks for your purchase and have a great day!</p>
+  </body>
+</html>

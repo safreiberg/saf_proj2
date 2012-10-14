@@ -6,7 +6,7 @@ class UsersControllerTest < ActionController::TestCase
   def test_user_creation_correct
     post :create, :user => {:email => "new_user", :password => "a", :password_confirmation => "a"}
     
-    assert_response :success
+    assert_response :redirect
     assert_not_nil session[:user_id], "Session[user_id] was nil after login."
     assert_not_nil session[:cart], "After login, a cart should be established."
     assert_equal true, session[:authenticated], "After login, session should indicate an authenticated user."

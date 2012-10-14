@@ -1,0 +1,18 @@
+Checkout confirmation
+============================================
+You have just checked out, and this is your checkout 
+confirmation.
+---------
+Name  Price   Quantity    Subtotal
+
+<% cid = Cart.find_by_user_id(@user.id)%>
+<% sum = 0 %>
+<% ProductOrder.where(:cart_id => cid).each do |po| %>
+<% p = Product.find_by_id(po.product_id)%>
+<%= p.name %>   <%= p.price %>    <%= po.quantity %>    <%= p.price.to_f * po.quantity.to_f %>
+<% sum = sum + (p.price.to_f * po.quantity.to_f)%>
+<% end %>
+
+Total: <%= sum.to_f%>
+---------
+Thanks for your purchase and have a great day!

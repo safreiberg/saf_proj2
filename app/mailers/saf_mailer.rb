@@ -6,4 +6,9 @@ class SafMailer < ActionMailer::Base
     @url = "powerful-scrubland-1233.herokuapp.com/welcome"
     mail(:to => user.email, :subject => "Welcome to SAFPROJ2.")
   end
+  
+  def checkout(uid)
+    @user = User.find_by_id(uid)
+    mail(:to => @user.email, :subject => "SAFPROJ2 checkout confirmation")
+  end
 end

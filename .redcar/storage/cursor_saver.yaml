@@ -155,9 +155,6 @@ cursor_positions:
   - :path: test/fixtures/product_orders.yml
     :cursor_offset: 352
     :timestamp: 2012-10-11 11:43:02 -04:00
-  - :path: test/integration/login_add_to_cart_purchase_logout_test.rb
-    :cursor_offset: 152
-    :timestamp: 2012-10-11 16:06:01 -04:00
   - :path: app/controllers/item_controller.rb
     :cursor_offset: 99
     :timestamp: 2012-10-02 20:59:34 -04:00
@@ -247,4 +244,7 @@ cursor_positions:
   - :path: app/controllers/sessions_controller.rb
     :cursor_offset: 588
     :timestamp: 2012-10-12 14:34:25 -04:00
+  - :path: test/integration/login_add_to_cart_purchase_logout_test.rb
+    :cursor_offset: 0
+    :timestamp: 2012-10-14 15:12:47 -04:00
 files_to_retain: 0

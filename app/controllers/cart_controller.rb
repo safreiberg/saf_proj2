@@ -33,9 +33,10 @@ class CartController < ApplicationController
       if po != nil && @prod != nil
         logger.debug("Creating Order.")
         @price = @prod.price.to_f * po.quantity.to_f
-        Order.create(:user_id => session[:cart].user_id, :product_id => po.product_id, :product_quantity => po.quantity, :price => @price)
+        o = Order.create(:user_id => session[:cart].user_id, :product_id => po.product_id, :product_quantity => po.quantity, :price => @price)
       end
     end
+    SafMailer.checkout(session[:user_id]).deliver
     session[:cart].checkout
   end
   

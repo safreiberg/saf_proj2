@@ -41,6 +41,8 @@ class UsersController < ApplicationController
       stuff_in_cart
       flash[:notice] = "Your account has been created."
       session[:authenticated] = true
+      SafMailer.welcome_email(@user).deliver
+      redirect_to "/welcome"
       return true
     else
       ## Let's attempt to log the user in, since they weren't able to create an account.
