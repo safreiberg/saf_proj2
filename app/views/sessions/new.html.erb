@@ -1,17 +1,3 @@
-<html>
-<body>
-  <h1>Sessions#new</h1>
-  <p>Find me in app/views/sessions/new.html.erb</p>
-  <h1>Log in</h1>
-  <div class="flash">
-    <%- if !notice.nil? -%>
-    <p class="notice"><%= notice %></p>
-    <%- end -%>
-    <%- if !alert.nil? -%>
-    <p class="alert"><%= alert %></p>
-    <%- end -%>
-</div>
-
   <%= form_tag('/sessions/create') do %>
   <div class= "field">
     <%= label_tag :email %>
@@ -26,6 +12,3 @@
   </div>
   <% end %>
   <br />
-  <p>Or if you don't have an account, <a href="/signup">sign up here</a>.</p>
-</body>
-</html>
