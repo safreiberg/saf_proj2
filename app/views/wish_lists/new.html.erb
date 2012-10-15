@@ -1,0 +1,33 @@
+<% @wishlists = WishList.where(:user_id => session[:user_id]) %>
+
+<% if @wishlists.nil? %>
+<p>You don't appear to have a wishlist! You can create one below!</p>
+<% else %>
+<p>Your existing wishlists are below:
+<table border="1">
+  <tr>
+    <th>Name</th>
+    <th>Private</th>
+  </tr>
+<% @wishlists.each do |wish_list| %>
+  <tr>
+    <td><a href="/wishlists/zoom/<%= wish_list.id %>"><%= wish_list.name %></a></td>
+    <td><%= wish_list.priv %></td>
+  </tr>
+<% end %>
+</table>
+<br />
+<br />
+<%end%>
+
+<p>New wishlist: </p>
+<%= form_for @wishlist, :url => { :action => "create" } do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <br />
+  <%= f.label :privacy %>
+  <%= f.radio_button :priv, "true" %> <%= label_tag :priv, "I want this list to be private" %>
+  <%= f.radio_button :priv, "false" %> <%= label_tag :priv, "I want this list to be public" %>
+  <%= f.submit "Create" %>
+<% end %>
+

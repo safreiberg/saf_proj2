@@ -39,6 +39,7 @@ class AdminController < ApplicationController
     logger.debug("Delete item: " + params[:prod_id].to_s)
     p = Product.where(:id => params[:prod_id]).first
     if p != nil
+      ProductOrder.where(:product_id => p.id).each do |po| po.destroy end
       p.delete
     end
     redirect_to "/admin/items" and return

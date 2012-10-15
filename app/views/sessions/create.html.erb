@@ -1,16 +1,1 @@
-<html>
-<body>
-  <h1>Sessions#create</h1>
-  <p>Find me in app/views/sessions/create.html.erb</p>
-  <p>Congrats on your signin, <%= session[:user_id].to_s%>.</p>
-  <div class="flash">
-    <%- if !notice.nil? -%>
-    <p class="notice"><%= notice %></p>
-    <%- end -%> 
-    <%- if !alert.nil? -%>
-    <p class="alert"><%= alert %></p>
-    <%- end -%>     
-</div>
-
-</body>
-</html>
+<p>Congrats on your signin, <%= User.find_by_id(session[:user_id]).email %>.</p>

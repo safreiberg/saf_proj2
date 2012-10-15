@@ -1,17 +1,4 @@
-<html>
-<body>
-  <h1>Item#zoom</h1>
-  <p>Find me in app/views/item/zoom.html.erb</p>
-  
-  <% if session[:authenticated] == false %>
-  <p>Currently you are known as Guest. You can sign in <a href="/login">here</a>.</p>
-  <% else %>
-  <p>Hi, <%= session[:user_id]%>.</p>
-  <p>You can also <a href="/logout">logout</a> if that's not you!</p>
-  <% end %>
-  
-  <p><a href="/item/list/">Back to library</a></p>
-  
+
   <% product = Product.where(:id => params[:id].to_i).first%>
   <p>Name: <%= product.name %></p>
   <p>Price: $<%= product.price %></p>
@@ -28,7 +15,3 @@
   <%= hidden_field_tag(:product_id, product.id)%>
   <%= submit_tag("Add!") %>
   <% end %>
-  
-  
-</body>
-</html>

@@ -1,0 +1,22 @@
+<% @wl = WishList.find_by_id(@id) %>
+<h1><%= @wl.name %></h1>
+<% if @wishes.empty? %> 
+This wishlist appears to be empty.
+<% else %>
+<table border="1">
+  <tr>
+    <th>Item</th>
+    <th>Price</th>
+    <th></th>
+  </tr>
+<% @wishes.each do |wish| %>
+<% prod = Product.find_by_id(wish.product_id)%>
+  <tr>
+    <td><a href="/item/zoom/<%= prod.id %>"><%= prod.name %></a></td>
+    <td><%= prod.price %></td>
+    <td><%= button_to('Delete',{ :action => "delete", :wish => wish.id, :wish_list_id => @wl.id } , :confirm => 'Are you sure?', :method => :post) %></td>
+  </tr>
+<% end %>
+</table>
+<% end %>
+<br />

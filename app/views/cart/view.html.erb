@@ -1,24 +1,3 @@
-<h1>Cart#view</h1>
-<p>Find me in app/views/cart/view.html.erb</p>
-
-  <% if session[:authenticated] == false %>
-  <p>Currently you are known as Guest. You can sign in <a href="/login">here</a>.</p>
-  <% else %>
-  <p>Hi, <%= session[:user_id]%>. Here's your cart:</p>
-  <p>You can also <a href="/logout">logout</a>.</p>
-  <% end %>
-
-<p>Back to <a href="/item/list">list</a>.</p>
-
-<div class="flash">
-    <%- if !notice.nil? -%>
-    <p class="notice"><%= notice %></p>
-    <%- end -%> 
-    <%- if !alert.nil? -%>
-    <p class="alert"><%= alert %></p>
-    <%- end -%>     
-</div>
-
 <% if ProductOrder.where(:cart_id => session[:cart].id).first != nil%>
 <p>Cart Contents:</p>
 <form action="/cart/view">

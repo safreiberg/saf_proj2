@@ -1,36 +1,14 @@
-  <h1>Item#list</h1>
-  <p>Find me in app/views/item/list.html.erb</p>
-
-  <% if session[:authenticated] == false %>
-  <p>Currently you are known as Guest. You can sign in <a href="/login">here</a>.</p>
-  <% else %>
-  <p>Hi, <%= session[:user_id]%>.</p>
-  <p>You can also <a href="/logout">logout</a> if that's not you!</p>
-  <% end %>
-
-  <p><a href="/cart/view">My Cart</a></p>
-
-  <div class="flash">
-    <%- if !notice.nil? -%>
-    <p class="notice"><%= notice %></p>
-    <%- end -%>
-    <%- if !alert.nil? -%>
-    <p class="alert"><%= alert %></p>
-    <%- end -%>
-  </div>
 
   <table border="1">
     <tr>
       <th>Name</th>
       <th>Price</th>
-      <th>ID</th>
       <th>Description</th>
     </tr>
     <% Product.find(:all).each do |product| %>
     <tr>
       <td><a href="/item/zoom/<%= product.id %>"><%= product.name %></a></td>
       <td><%= product.price %></td>
-      <td><%= product.id %></td>
       <td><%= product.description %></td>
     </tr><% end %>
   </table>

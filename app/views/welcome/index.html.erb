@@ -1,25 +1,8 @@
-<h1>Welcome#index</h1>
-<p>Find me in app/views/welcome/index.html.erb</p>
+<p>Welcome to SAFPROJ2!</p>
 
-  <% if session[:authenticated] == false %>
-  <p>Currently you are known as Guest. You can sign in <a href="/login">here</a>.</p>
-  <% else %>
-  <p>Hi, <%= session[:user_id]%>.</p>
-  <p>You can also <a href="/logout">logout</a> if that's not you!</p>
-  <% end %>
+<p>You should look around for a while... You can look through the library above, and just start shopping!</p>
 
-<p>Look at the <a href="/item/list">items</a>!</p>
-
-<p><a href="/cart/view">My Cart</a></p>
-
-<div class="flash">
-    <%- if !notice.nil? -%>
-    <p class="notice"><%= notice %></p>
-    <%- end -%> 
-    <%- if !alert.nil? -%>
-    <p class="alert"><%= alert %></p>
-    <%- end -%>     
-</div>
+<p>We recommend that you sign up / login for the best experience with us. Enjoy your stay.</p>
 
 <% u = User.where(:id => session[:user_id]).first %>
 <% if u != nil && u.admin %>

@@ -1,0 +1,22 @@
+<h1>Listing your wishlists:</h1>
+
+<table border="1">
+  <tr>
+    <th>Name</th>
+    <th>Private</th>
+  </tr>
+<% if @wishlists.nil? %>
+<% redirect_to "/wishlists/new"%>
+<% return true %>
+<% else %>
+<% @wishlists.each do |wish_list| %>
+  <tr>
+    <td><a href="/wishlists/zoom/<%= wish_list.id %>"><%= wish_list.name %></a></td>
+    <td><%= wish_list.priv %></td>
+  </tr>
+<% end %>
+</table>
+<% end %>
+<br />
+
+<%= button_to("Add a list", :action => "new")%>

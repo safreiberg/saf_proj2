@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121004181405) do
+ActiveRecord::Schema.define(:version => 20121015041936) do
 
   create_table "carts", :force => true do |t|
     t.integer  "user_id",    :limit => 8
@@ -63,6 +63,21 @@ ActiveRecord::Schema.define(:version => 20121004181405) do
     t.datetime "updated_at",      :null => false
     t.boolean  "authenticated"
     t.boolean  "admin"
+  end
+
+  create_table "wish_lists", :force => true do |t|
+    t.string   "name"
+    t.integer  "user_id"
+    t.boolean  "priv"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "wishes", :force => true do |t|
+    t.integer  "product_id"
+    t.integer  "wish_list_id"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
   end
 
 end
