@@ -19,8 +19,8 @@
   </table>
   <input type="hidden" name="update" value="true">
   <input type="submit" value="Update">
-  <p><a href="/cart/checkout">Checkout!</a></p>
+</form>
+<p><%= button_to("Checkout!", "/cart/checkout")%></p>
 <% else %>
 <p>Your cart appears to be empty. Go buy some stuff :).</p>
 <% end %>
-</form>
