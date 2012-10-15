@@ -63,7 +63,8 @@ class LoginsTest < ActionDispatch::IntegrationTest
     post_via_redirect "/cart/view", {:quantity => 4, :product_id => 2}
     assert_equal "/cart/view", path
     assert_equal 1, ProductOrder.count(:conditions => ["cart_id = ?", session[:cart].id])
-    assert_equal 4, ProductOrder.where(:cart_id => session[:cart].id).first.quantity
+    ## Inventory limit...
+    assert_equal 1, ProductOrder.where(:cart_id => session[:cart].id).first.quantity
     assert_equal 2, ProductOrder.where(:cart_id => session[:cart].id).first.product_id
     
     ## Back to list
@@ -92,7 +93,8 @@ class LoginsTest < ActionDispatch::IntegrationTest
     assert_equal "/cart/view", path
     assert_equal 2, ProductOrder.count(:conditions => ["cart_id = ?", session[:cart].id])
     assert_equal 1, ProductOrder.count(:conditions => ["cart_id = ? AND product_id = 2", session[:cart].id ])
-    assert_equal 12, ProductOrder.where(:cart_id => session[:cart].id, :product_id => 2).first.quantity
+    ## Inventory
+    assert_equal 1, ProductOrder.where(:cart_id => session[:cart].id, :product_id => 2).first.quantity
     
     ## Checkout
     get "/cart/checkout"
@@ -126,7 +128,9 @@ class LoginsTest < ActionDispatch::IntegrationTest
     post_via_redirect "/cart/view", {:quantity => 4, :product_id => 2}
     assert_equal "/cart/view", path
     assert_equal 1, ProductOrder.count(:conditions => ["cart_id = ?", session[:cart].id])
-    assert_equal 4, ProductOrder.where(:cart_id => session[:cart].id).first.quantity
+    ## Should not be able to add more than the inventory.
+    assert_equal 1, ProductOrder.where(:cart_id => session[:cart].id).first.quantity
+    assert_not_nil flash[:notice]
     assert_equal 2, ProductOrder.where(:cart_id => session[:cart].id).first.product_id
     
     ## Sign in
@@ -168,7 +172,8 @@ class LoginsTest < ActionDispatch::IntegrationTest
     assert_equal "/cart/view", path
     assert_equal 2, ProductOrder.count(:conditions => ["cart_id = ?", session[:cart].id])
     assert_equal 1, ProductOrder.count(:conditions => ["cart_id = ? AND product_id = 2", session[:cart].id ])
-    assert_equal 12, ProductOrder.where(:cart_id => session[:cart].id, :product_id => 2).first.quantity
+    ## Inventory
+    assert_equal 4, ProductOrder.where(:cart_id => session[:cart].id, :product_id => 1).first.quantity
     
     ## Checkout
     get "/cart/checkout"
