@@ -14,11 +14,11 @@ class CartController < ApplicationController
         prod_ord = ProductOrder.create(:cart_id => session[:cart].id, :quantity => params[:quantity], :product_id => params[:product_id])
       end
       if prod_ord.quantity > Product.find_by_id(prod_ord.product_id).inventory
-        prod_ord.quantity = Product.find_by_id(prod_ord.product_id).inventory
+        prod_ord.change_quantity(Product.find_by_id(prod_ord.product_id).inventory)
         flash[:notice] = "You attempted to purchase more than the inventory, so we decreased your order to the max."
       end
       if prod_ord.quantity < 0
-        prod_ord.quantity = 1
+        prod_ord.change_quantity(1)
         flash[:notice] = "You must buy at least one! Silly goose."
       end
     end
