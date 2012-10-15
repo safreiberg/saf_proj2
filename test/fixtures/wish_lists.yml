@@ -15,9 +15,9 @@
 one:
   name: MyString
   user_id: 1
-  private: false
+  priv: false
 
 two:
   name: MyString
   user_id: 1
-  private: false
+  priv: false

@@ -329,9 +329,6 @@ cursor_positions:
   - :path: config/database.yml
     :cursor_offset: 0
     :timestamp: 2012-10-14 15:12:47 -04:00
-  - :path: config/routes.rb
-    :cursor_offset: 578
-    :timestamp: 2012-10-15 03:10:10 -04:00
   - :path: config/environments/development.rb
     :cursor_offset: 0
     :timestamp: 2012-10-14 15:12:47 -04:00
@@ -371,12 +368,6 @@ cursor_positions:
   - :path: app/views/sessions/create.html.erb
     :cursor_offset: 62
     :timestamp: 2012-10-15 02:02:31 -04:00
-  - :path: app/views/cart/view.html.erb
-    :cursor_offset: 769
-    :timestamp: 2012-10-15 03:31:37 -04:00
-  - :path: app/views/cart/checkout.html.erb
-    :cursor_offset: 132
-    :timestamp: 2012-10-15 01:46:42 -04:00
   - :path: app/controllers/welcome_controller.rb
     :cursor_offset: 128
     :timestamp: 2012-10-14 15:12:47 -04:00
@@ -386,4 +377,13 @@ cursor_positions:
   - :path: app/controllers/cart_controller.rb
     :cursor_offset: 1696
     :timestamp: 2012-10-14 20:02:34 -04:00
+  - :path: app/views/cart/view.html.erb
+    :cursor_offset: 807
+    :timestamp: 2012-10-15 03:36:01 -04:00
+  - :path: app/views/cart/checkout.html.erb
+    :cursor_offset: 132
+    :timestamp: 2012-10-15 01:46:42 -04:00
+  - :path: config/routes.rb
+    :cursor_offset: 578
+    :timestamp: 2012-10-15 03:35:59 -04:00
 files_to_retain: 0
