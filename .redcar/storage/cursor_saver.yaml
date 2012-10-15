@@ -237,18 +237,9 @@ cursor_positions:
   - :path: app/helpers/wish_lists_helper.rb
     :cursor_offset: 0
     :timestamp: 2012-10-14 21:47:07 -04:00
-  - :path: config/routes.rb
-    :cursor_offset: 366
-    :timestamp: 2012-10-15 01:27:21 -04:00
   - :path: app/views/wish_lists/view.html.erb
     :cursor_offset: 266
     :timestamp: 2012-10-15 01:38:54 -04:00
-  - :path: app/views/wish_lists/zoom.html.erb
-    :cursor_offset: 90
-    :timestamp: 2012-10-15 01:41:31 -04:00
-  - :path: app/controllers/wish_lists_controller.rb
-    :cursor_offset: 249
-    :timestamp: 2012-10-15 01:40:21 -04:00
   - :path: app/assets/stylesheets/wish_lists.css.scss
     :cursor_offset: 180
     :timestamp: 2012-10-14 21:47:07 -04:00
@@ -341,4 +332,13 @@ cursor_positions:
   - :path: app/views/admin/items.html.erb
     :cursor_offset: 536
     :timestamp: 2012-10-15 02:09:10 -04:00
+  - :path: app/controllers/wish_lists_controller.rb
+    :cursor_offset: 485
+    :timestamp: 2012-10-15 02:18:13 -04:00
+  - :path: config/routes.rb
+    :cursor_offset: 416
+    :timestamp: 2012-10-15 02:13:17 -04:00
+  - :path: app/views/wish_lists/zoom.html.erb
+    :cursor_offset: 195
+    :timestamp: 2012-10-15 02:18:38 -04:00
 files_to_retain: 0

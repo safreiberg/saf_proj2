@@ -15,3 +15,9 @@
   <%= hidden_field_tag(:product_id, product.id)%>
   <%= submit_tag("Add!") %>
   <% end %>
+  
+  <p>Add to wishlist:</p>
+  <%= form_tag("/wishlists/additem/", :method => "post") do %>
+  <%= select("post", "wish_list_id", WishList.where(:user_id => session[:user_id]).collect {|p| [ p.name, p.id ] }, {:include_blank => 'None'}) %>
+  <%= submit_tag("Add!") %>
+  <% end %>
