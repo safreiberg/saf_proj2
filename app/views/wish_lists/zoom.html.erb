@@ -20,3 +20,16 @@ This wishlist appears to be empty.
 </table>
 <% end %>
 <br />
+<br />
+<br />
+<% if @wl.priv == false && session[:authenticated] %>
+Since this wishlist is public, you can share it by email with friends and family.
+<form action="/wishlists/email/" method="post">
+  <input type="text" size="10" value="Email of recipient" name="addr"></td>
+  <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>" />
+  <input name="wl_id" type="hidden" value="<%= @wl.id %>" />
+  <input type="submit" value="Share">
+</form>  
+<% end %>
+<br />
+<%= button_to('Delete list',{ :action => "delete_list", :wish_list_id => @wl.id } , :confirm => 'Are you sure?', :method => :post) %>

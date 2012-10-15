@@ -1,4 +1,4 @@
-1350282395
+1350284954
 AddAdminToUsers	/home/saf/projects/saf_proj2/db/migrate/20121004153733_add_admin_to_users.rb	class AddAdminToUsers 
 AddAuthenticatedToUsers	/home/saf/projects/saf_proj2/db/migrate/20121004014426_add_authenticated_to_users.rb	class AddAuthenticatedToUsers 
 AddPriceToOrders	/home/saf/projects/saf_proj2/db/migrate/20121004181405_add_price_to_orders.rb	class AddPriceToOrders 
@@ -64,6 +64,7 @@ WishTest	/home/saf/projects/saf_proj2/test/unit/wish_test.rb	class WishTest
 add	/home/saf/projects/saf_proj2/app/models/cart.rb	  def add(prod_ord)
 add_to_cart	/home/saf/projects/saf_proj2/app/models/product_order.rb	  def add_to_cart(new_cart_id)
 add_to_wish_list	/home/saf/projects/saf_proj2/app/models/wish.rb	  def add_to_wish_list(wish_list_id)
+additem	/home/saf/projects/saf_proj2/app/controllers/wish_lists_controller.rb	  def additem
 assign	/home/saf/projects/saf_proj2/app/models/cart.rb	  def assign(user)
 change	/home/saf/projects/saf_proj2/db/migrate/20121004153733_add_admin_to_users.rb	  def change
 change	/home/saf/projects/saf_proj2/db/migrate/20121001200222_create_products.rb	  def change
@@ -83,8 +84,8 @@ checkAuth	/home/saf/projects/saf_proj2/app/controllers/application_controller.rb
 check_admin	/home/saf/projects/saf_proj2/app/controllers/application_controller.rb	  def check_admin
 check_cart	/home/saf/projects/saf_proj2/app/controllers/application_controller.rb	  def check_cart
 checkout	/home/saf/projects/saf_proj2/app/models/cart.rb	  def checkout
-checkout	/home/saf/projects/saf_proj2/app/mailers/saf_mailer.rb	  def checkout(user)
 checkout	/home/saf/projects/saf_proj2/app/controllers/cart_controller.rb	  def checkout
+checkout	/home/saf/projects/saf_proj2/app/mailers/saf_mailer.rb	  def checkout(user)
 clear	/home/saf/projects/saf_proj2/app/models/cart.rb	  def clear
 create	/home/saf/projects/saf_proj2/app/controllers/sessions_controller.rb	  def create
 create	/home/saf/projects/saf_proj2/app/controllers/users_controller.rb	  def create
@@ -93,11 +94,13 @@ current_user	/home/saf/projects/saf_proj2/app/controllers/application_controller
 delete	/home/saf/projects/saf_proj2/app/models/wish.rb	  def delete
 delete	/home/saf/projects/saf_proj2/app/controllers/admin_controller.rb	  def delete 
 delete	/home/saf/projects/saf_proj2/app/controllers/wish_lists_controller.rb	  def delete 
+delete_list	/home/saf/projects/saf_proj2/app/controllers/wish_lists_controller.rb	  def delete_list
 destroy	/home/saf/projects/saf_proj2/app/controllers/sessions_controller.rb	  def destroy
 do_helo	/home/saf/projects/saf_proj2/vendor/plugins/gmail_smtp/lib/smtp_tls.rb		def do_helo(helodomain)
 do_start	/home/saf/projects/saf_proj2/vendor/plugins/gmail_smtp/lib/smtp_tls.rb		def do_start(helodomain, user, secret, authtype)
 down	/home/saf/projects/saf_proj2/db/migrate/20121015041936_rename_wish_list_private_to_priv.rb	  def down
 edit	/home/saf/projects/saf_proj2/app/controllers/users_controller.rb	  def edit
+email	/home/saf/projects/saf_proj2/app/controllers/wish_lists_controller.rb	  def email
 index	/home/saf/projects/saf_proj2/app/controllers/welcome_controller.rb	  def index
 items	/home/saf/projects/saf_proj2/app/controllers/admin_controller.rb	  def items
 list	/home/saf/projects/saf_proj2/app/controllers/item_controller.rb	  def list
@@ -108,6 +111,7 @@ orders	/home/saf/projects/saf_proj2/app/controllers/admin_controller.rb	  def or
 quit	/home/saf/projects/saf_proj2/vendor/plugins/gmail_smtp/lib/smtp_tls.rb		def quit
 remove	/home/saf/projects/saf_proj2/app/models/cart.rb	  def remove(prod_ord)
 remove_from_cart	/home/saf/projects/saf_proj2/app/models/product_order.rb	  def remove_from_cart
+share_wl	/home/saf/projects/saf_proj2/app/mailers/saf_mailer.rb	  def share_wl(url,addr,user)
 specs	/home/saf/projects/saf_proj2/app/controllers/cart_controller.rb	  def specs
 starttls	/home/saf/projects/saf_proj2/vendor/plugins/gmail_smtp/lib/smtp_tls.rb		def starttls
 stuff_in_cart	/home/saf/projects/saf_proj2/app/controllers/users_controller.rb	  def stuff_in_cart

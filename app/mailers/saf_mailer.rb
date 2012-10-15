@@ -11,4 +11,11 @@ class SafMailer < ActionMailer::Base
     @user = user
     mail(:to => @user.email, :subject => "SAFPROJ2 checkout confirmation")
   end
+  
+  def share_wl(url,addr,user)
+    @url = "powerful-scrubland-1233.herokuapp.com" + url.to_s
+    @user = user
+    sub = "" + @user.email.to_s + " has sent you a wishlist"
+    mail(:to => addr, :subject => sub)
+  end
 end

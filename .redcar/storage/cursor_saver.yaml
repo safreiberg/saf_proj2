@@ -108,12 +108,6 @@ cursor_positions:
   - :path: app/views/saf_mailer/welcome_email.text.erb
     :cursor_offset: 262
     :timestamp: 2012-10-14 15:15:23 -04:00
-  - :path: app/views/saf_mailer/welcome_email.html.erb
-    :cursor_offset: 430
-    :timestamp: 2012-10-14 17:05:33 -04:00
-  - :path: app/mailers/saf_mailer.rb
-    :cursor_offset: 295
-    :timestamp: 2012-10-14 17:29:32 -04:00
   - :path: config/environment.rb
     :cursor_offset: 0
     :timestamp: 2012-10-14 15:12:47 -04:00
@@ -192,9 +186,6 @@ cursor_positions:
   - :path: test/functional/wish_lists_controller_test.rb
     :cursor_offset: 82
     :timestamp: 2012-10-15 00:09:46 -04:00
-  - :path: app/controllers/cart_controller.rb
-    :cursor_offset: 957
-    :timestamp: 2012-10-14 20:02:34 -04:00
   - :path: app/controllers/sessions_controller.rb
     :cursor_offset: 0
     :timestamp: 2012-10-14 15:12:47 -04:00
@@ -228,18 +219,6 @@ cursor_positions:
   - :path: app/views/wish_lists/new.html.erb
     :cursor_offset: 274
     :timestamp: 2012-10-15 01:23:10 -04:00
-  - :path: app/controllers/welcome_controller.rb
-    :cursor_offset: 0
-    :timestamp: 2012-10-14 15:12:47 -04:00
-  - :path: app/models/wish.rb
-    :cursor_offset: 488
-    :timestamp: 2012-10-14 22:07:36 -04:00
-  - :path: app/helpers/wish_lists_helper.rb
-    :cursor_offset: 0
-    :timestamp: 2012-10-14 21:47:07 -04:00
-  - :path: app/views/wish_lists/view.html.erb
-    :cursor_offset: 266
-    :timestamp: 2012-10-15 01:38:54 -04:00
   - :path: app/assets/stylesheets/wish_lists.css.scss
     :cursor_offset: 180
     :timestamp: 2012-10-14 21:47:07 -04:00
@@ -276,18 +255,12 @@ cursor_positions:
   - :path: app/assets/stylesheets/scaffolds.css.scss
     :cursor_offset: 254
     :timestamp: 2012-10-14 21:47:07 -04:00
-  - :path: app/views/item/zoom.html.erb
-    :cursor_offset: 494
-    :timestamp: 2012-10-15 01:45:20 -04:00
   - :path: app/views/item/list.html.erb
     :cursor_offset: 278
     :timestamp: 2012-10-15 01:46:01 -04:00
   - :path: app/views/cart/view.html.erb
     :cursor_offset: 491
     :timestamp: 2012-10-15 01:47:06 -04:00
-  - :path: app/views/cart/checkout.html.erb
-    :cursor_offset: 127
-    :timestamp: 2012-10-15 01:46:42 -04:00
   - :path: app/views/sessions/create.html.erb
     :cursor_offset: 62
     :timestamp: 2012-10-15 02:02:31 -04:00
@@ -329,16 +302,51 @@ cursor_positions:
   - :path: app/controllers/admin_controller.rb
     :cursor_offset: 1171
     :timestamp: 2012-10-15 00:39:52 -04:00
-  - :path: app/views/admin/items.html.erb
-    :cursor_offset: 536
-    :timestamp: 2012-10-15 02:09:10 -04:00
-  - :path: app/controllers/wish_lists_controller.rb
-    :cursor_offset: 485
-    :timestamp: 2012-10-15 02:18:13 -04:00
-  - :path: config/routes.rb
-    :cursor_offset: 416
-    :timestamp: 2012-10-15 02:13:17 -04:00
   - :path: app/views/wish_lists/zoom.html.erb
     :cursor_offset: 195
     :timestamp: 2012-10-15 02:18:38 -04:00
+  - :path: app/helpers/wish_lists_helper.rb
+    :cursor_offset: 27
+    :timestamp: 2012-10-14 21:47:07 -04:00
+  - :path: app/models/wish.rb
+    :cursor_offset: 388
+    :timestamp: 2012-10-14 22:07:36 -04:00
+  - :path: config/routes.rb
+    :cursor_offset: 468
+    :timestamp: 2012-10-15 02:28:11 -04:00
+  - :path: app/controllers/wish_lists_controller.rb
+    :cursor_offset: 1239
+    :timestamp: 2012-10-15 02:34:38 -04:00
+  - :path: app/views/item/zoom.html.erb
+    :cursor_offset: 822
+    :timestamp: 2012-10-15 02:33:28 -04:00
+  - :path: app/controllers/welcome_controller.rb
+    :cursor_offset: 0
+    :timestamp: 2012-10-14 15:12:47 -04:00
+  - :path: app/views/wish_lists/view.html.erb
+    :cursor_offset: 266
+    :timestamp: 2012-10-15 01:38:54 -04:00
+  - :path: app/controllers/cart_controller.rb
+    :cursor_offset: 2484
+    :timestamp: 2012-10-14 20:02:34 -04:00
+    :selection_offset: 2445
+    :block_selection_mode: false
+  - :path: app/views/cart/checkout.html.erb
+    :cursor_offset: 127
+    :timestamp: 2012-10-15 01:46:42 -04:00
+  - :path: app/views/saf_mailer/share_wl.text.erb
+    :cursor_offset: 153
+    :timestamp: 2012-10-15 02:57:15 -04:00
+  - :path: app/views/saf_mailer/welcome_email.html.erb
+    :cursor_offset: 430
+    :timestamp: 2012-10-14 17:05:33 -04:00
+  - :path: app/mailers/saf_mailer.rb
+    :cursor_offset: 560
+    :timestamp: 2012-10-15 02:57:19 -04:00
+  - :path: app/views/admin/items.html.erb
+    :cursor_offset: 961
+    :timestamp: 2012-10-15 02:57:20 -04:00
+  - :path: app/views/saf_mailer/share_wl.html.erb
+    :cursor_offset: 242
+    :timestamp: 2012-10-15 02:56:51 -04:00
 files_to_retain: 0

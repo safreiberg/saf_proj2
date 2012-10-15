@@ -8,6 +8,9 @@ SafProj2::Application.routes.draw do
   get "/wishlists/zoom/:id" => "wish_lists#zoom"
   post "/wishlists/zoom/:id" => "wish_lists#zoom"
   post "/wishlists/delete/" => "wish_lists#delete"
+  post "/wishlists/additem" => "wish_lists#additem"
+  post "/wishlists/delete_list" => "wish_lists#delete_list"
+  post "/wishlists/email/" => "wish_lists#email"
   
   get "/admin/orders" => "admin#orders"
   get "/admin/items" => "admin#items"
